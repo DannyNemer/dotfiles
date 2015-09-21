@@ -1,0 +1,12 @@
+[alias]
+	# `git restore-dates [$number]` restores the commit dates to corresponding
+	# author dates of the `$number` most recent commits, or all commits if `$number`
+	# is undefined. This is useful after a rebase.
+	restore-dates = !"restoreDates() { \
+		cd $(git rev-parse --show-toplevel); \
+		git stash; \
+		git filter-branch --env-filter \
+			'GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE' -f \
+		$([[ -n "$1" ]] && echo HEAD~$1..HEAD); \
+		git stash pop; \
+	}; restoreDates"
