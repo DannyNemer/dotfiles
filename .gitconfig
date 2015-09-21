@@ -8,5 +8,5 @@
 		git filter-branch --env-filter \
 			'GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_DATE' -f \
 		$([[ -n "$1" ]] && echo HEAD~$1..HEAD); \
-		git stash pop; \
+		git stash pop --quiet; \
 	}; restoreDates"
