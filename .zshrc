@@ -1,0 +1,11 @@
+# Number of lines to save to HISTFILE
+HISTSIZE=100000
+# Number of lines to save in a sessions
+SAVEHIST=100000
+
+# Delete old recorded entry if new entry is a duplicate
+setopt HIST_IGNORE_ALL_DUPS
+# Prevent duplicate entries in the history file
+setopt HIST_SAVE_NO_DUPS
+# Remove superfluous blanks before recording entry
+setopt HIST_REDUCE_BLANKS
