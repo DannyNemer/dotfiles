@@ -1,4 +1,4 @@
-# Sets system volume to $number on a scale from 0 to 10.
+# Sets system volume to $number on a scale of 0 to 10.
 function vol() {
   osascript -e "set volume ${1}"
 }
