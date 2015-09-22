@@ -9,3 +9,9 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 # Remove superfluous blanks before recording entry
 setopt HIST_REDUCE_BLANKS
+
+# Load shell dotfiles
+for file in ~/.{aliases,exports,functions}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
+done
+unset file
