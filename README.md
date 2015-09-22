@@ -6,3 +6,6 @@ My meticulously crafted dotfiles. I will slowly construct this repo from my exis
 
 ## `.aliases`
 - `swlog` Prints the timestamps of the 10 most recent sleep and wake events (for OS X portables). This answers the question, "How long have I been at the computer?"
+
+## `.functions`
+- `vol $number` Sets system volume to $number on a scale from 0 to 10.
