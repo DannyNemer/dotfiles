@@ -9,6 +9,3 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 # Remove superfluous blanks before recording entry
 setopt HIST_REDUCE_BLANKS
-
-# Set location for brew-cask apps
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
