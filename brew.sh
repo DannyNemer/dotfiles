@@ -4,7 +4,9 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install command line programs
-brew install node go
+brew install node go fasd
+brew install --HEAD fzf
+/usr/local/Cellar/fzf/HEAD/install
 
 # Install GUI programs
 brew install caskroom/cask/brew-cask
