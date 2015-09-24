@@ -19,3 +19,6 @@ brew cask install suspicious-package qlcolorcode qlmarkdown qlstephen quicklook-
 # Install fonts
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
+
+# Install global npm packages
+npm install --global trash node-inspector
