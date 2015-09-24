@@ -3,7 +3,7 @@
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install command line programs
+# Install Homebrew packages
 brew install node go fasd
 brew install --HEAD fzf
 /usr/local/Cellar/fzf/HEAD/install
@@ -22,3 +22,9 @@ brew cask install font-source-code-pro
 
 # Install global npm packages
 npm install --global trash node-inspector
+
+# Install pip
+sudo easy_install pip
+
+# Install pip packages
+sudo pip install grip
