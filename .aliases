@@ -25,3 +25,21 @@ alias gst='git status'
 alias glg='git log --stat --color --graph --decorate'
 alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias grlg='git reflog'
+
+# Builtin.
+alias ...=../..
+alias ....=../../..
+alias .....=../../../..
+alias ......=../../../../..
+alias 1='cd -'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+alias 6='cd -6'
+alias 7='cd -7'
+alias 8='cd -8'
+alias 9='cd -9'
+
+# List all files in long format, including hidden directories, with file size unit suffixes, and colorized.
+alias l='ls -lahG'
