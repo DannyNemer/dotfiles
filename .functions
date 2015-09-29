@@ -2,3 +2,8 @@
 function vol() {
   osascript -e "set volume ${1}"
 }
+
+# Search git commits that match `$pattern` while ignoring case.
+function glgrep() {
+  git log --grep="${1}" --regexp-ignore-case
+}
