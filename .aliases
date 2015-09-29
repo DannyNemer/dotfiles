@@ -25,6 +25,8 @@ alias gst='git status'
 alias glg='git log --stat --color --graph --decorate'
 alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias grlg='git reflog'
+alias gd='git diff'
+alias gdca='git diff --cached'
 
 # Builtin.
 alias ...=../..
