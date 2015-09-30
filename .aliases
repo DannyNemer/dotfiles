@@ -27,6 +27,7 @@ alias glol='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Cre
 alias grlg='git reflog'
 alias gd='git diff'
 alias gdca='git diff --cached'
+alias gbl='git blame -b -s -w'
 
 # Builtin.
 alias ...=../..
