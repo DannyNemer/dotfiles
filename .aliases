@@ -7,6 +7,9 @@ alias mute='osascript -e "set volume output muted not (output muted of (get volu
 # Puts system to sleep.
 alias sleepnow='pmset sleepnow'
 
+# Reloads the shell (i.e., invokes as a login shell).
+alias reload="exec $SHELL -l"
+
 # Git.
 alias ga='git add -v'
 alias gau='git add -vu'
