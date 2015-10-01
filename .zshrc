@@ -11,7 +11,7 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 
 # Load shell dotfiles
-for file in ~/.{aliases,exports,functions}; do
+for file in $(cd $(dirname $0) && pwd)/.{aliases,exports,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
