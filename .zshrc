@@ -16,17 +16,13 @@ for file in $(cd $(dirname $0) && pwd)/.{aliases,exports,functions}; do
 done
 unset file
 
-# fasd.
+# Fasd.
 fasd_cache="$ZSH_CACHE_DIR/fasd-init-cache"
 if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
   fasd --init autol >| "$fasd_cache"
 fi
 source "$fasd_cache"
 unset fasd_cache
-
-alias v='f -e vim'
-alias o='a -e open'
-alias st='f -e subl'
 
 # fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
