@@ -4,6 +4,12 @@
 # System          #
 ###################
 
+# Disable the sound effects on boot.
+sudo nvram SystemAudioVolume=" "
+
+# Restart automatically if the computer freezes.
+sudo systemsetup -setrestartfreeze on
+
 # Expand save panel by default.
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -45,6 +51,7 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # Use scroll gesture with the Ctrl (^) modifier key to zoom.
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
 # Follow the keyboard focus while zoomed in.
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
@@ -57,6 +64,9 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Require password immediately after sleep or screen saver begins.
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Enable power chime sound effect.
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
 
 ###################
 # Finder          #
