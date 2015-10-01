@@ -1,5 +1,8 @@
-# Folder view configuration files
+# Folder view configuration files.
 .DS_Store
 
-# Sublime Text project configuration files
+# Sublime Text project configuration files.
 *.sublime-*
+
+# NPM packages.
+/node_modules
