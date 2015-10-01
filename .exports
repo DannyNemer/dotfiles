@@ -1,2 +1,2 @@
-# Set location for Homebrew Cask applications
+# Set location for Homebrew Cask applications.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
