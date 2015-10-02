@@ -34,6 +34,8 @@ alias grlg='git reflog'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gbl='git blame -b -s -w'
+alias gco='git checkout'
+alias gcm='git checkout master'
 
 # Fasd.
 alias v='f -e vim'
