@@ -1,3 +1,21 @@
+[core]
+	# Set tab width for git diff to 2 spaces.
+	pager = less -x2
+	excludesfile = /Users/Danny/.gitignore
+	editor = /usr/bin/vim
+[user]
+	name = Danny Nemer
+	email = hi@DannyNemer.com
+[push]
+	default = simple
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
 [alias]
 	# `git restore-dates [$number]` restores the commit dates to corresponding
 	# author dates of the `$number` most recent commits, or all commits if `$number`
