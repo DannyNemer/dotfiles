@@ -2,3 +2,14 @@
 function vol() {
   osascript -e "set volume ${1}"
 }
+
+# Opens current directory on Dropbox.com (if it is in your Dropbox folder). This is useful for file recovery.
+function odb() {
+	DIR="$(cd "$(dirname "$0")" && pwd)"
+	if [[ $DIR == *"Dropbox"* ]]
+	then
+		open ${DIR/*Dropbox/https://www.dropbox.com/home}
+	else
+		echo "odb: $DIR not in Dropbox folder"
+	fi
+}
