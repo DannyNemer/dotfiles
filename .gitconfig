@@ -3,19 +3,24 @@
 	pager = less -x2
 	excludesfile = /Users/Danny/.gitignore
 	editor = /usr/bin/vim
+
 [user]
 	name = Danny Nemer
 	email = hi@DannyNemer.com
+
 [push]
 	default = simple
+
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
 	required = true
+
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+
 [alias]
 	# `git restore-dates [$number]` restores the commit dates to corresponding
 	# author dates of the `$number` most recent commits, or all commits if `$number`
@@ -28,16 +33,22 @@
 		$([[ -n "$1" ]] && echo HEAD~$1..HEAD); \
 		git stash pop --quiet; \
 	}; restoreDates"
+
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustexitcode = true
+
 [merge]
 	tool = Kaleidoscope
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
 [difftool]
 	prompt = false
+
 [mergetool]
 	prompt = false
+
 [diff]
 	tool = Kaleidoscope
