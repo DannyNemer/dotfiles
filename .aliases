@@ -1,14 +1,17 @@
 # Prints the timestamps of the 10 most recent sleep and wake events (for OS X portables). This answers the question, "How long have I been at the computer?"
 alias swlog='pmset -g log | grep -e " Sleep  " -e " Wake  " | tail -n 10'
 
-# Mutes and unmutes system volume.
+# Toggles system volume.
 alias mute='osascript -e "set volume output muted not (output muted of (get volume settings))"'
 
 # Puts system to sleep.
 alias sleepnow='pmset sleepnow'
 
 # Reloads the shell (i.e., invokes as a login shell).
-alias reload="exec $SHELL -l"
+alias reload='exec $SHELL -l'
+
+# List all files in long format, including hidden directories, with file size unit suffixes, and colorized.
+alias l='ls -lahG'
 
 # Git.
 alias ga='git add -v'
@@ -56,6 +59,3 @@ alias 6='cd -6'
 alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
-
-# List all files in long format, including hidden directories, with file size unit suffixes, and colorized.
-alias l='ls -lahG'

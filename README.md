@@ -8,7 +8,7 @@ My meticulously crafted dotfiles. I will slowly construct this repo from my exis
 
 - `swlog` Prints the timestamps of the 10 most recent sleep and wake events (for OS X portables). This answers the question, "How long have I been at the computer?"
 
-- `mute` Mutes and unmutes system volume.
+- `mute` Toggles system volume.
 
 - `sleepnow` Puts system to sleep.
 
