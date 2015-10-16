@@ -10,6 +10,9 @@ setopt HIST_SAVE_NO_DUPS
 # Remove superfluous blanks before recording entry.
 setopt HIST_REDUCE_BLANKS
 
+# Set a tab stop every 2 columns.
+tabs -2
+
 # Load shell dotfiles.
 for file in $(cd $(dirname $0) && pwd)/.{aliases,exports,functions}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
