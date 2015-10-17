@@ -29,3 +29,6 @@ Restore application preferences:
 Setup Alfred sync.
 
 Sync Desktop with Dropbox.
+
+Configure OS settings:
+	sh osx.sh
