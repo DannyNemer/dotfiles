@@ -1,3 +1,27 @@
+#######################
+# Oh My Zsh           #
+#######################
+
+# Path to oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set oh-my-zsh theme.
+ZSH_THEME='robbyrussell'
+
+# Display command execution time stamp in `history` output. This requires oh-my-zsh.
+HIST_STAMPS='yyyy-mm-dd'
+
+# Set oh-my-zsh plugins.
+plugins=(git brew brew-cask npm golang)
+
+# Load oh-my-zsh.
+source $ZSH/oh-my-zsh.sh
+
+
+########################
+# Custom configuration #
+########################
+
 # Number of lines to save to HISTFILE.
 HISTSIZE=100000
 # Number of lines to save in a sessions.
