@@ -1,8 +1,6 @@
 Manually install the following applications. When complete, open 'Xcode.app' to
 install the command line tools. Do so before executing 'install.sh', which
 relies on the command line tools.
-
-Mac App Store:
 	1Password.app
 	AppDelete Lite.app
 	Clear.app
@@ -16,3 +14,18 @@ Mac App Store:
 	Tweetbot.app
 	Type2Phone.app
 	Xcode.app
+
+Install packages:
+	sh install.sh
+
+Setup Dropbox (after installing via brew).
+
+Create symbolic links:
+	sh link.sh
+
+Restore application preferences:
+	mackup restore
+
+Setup Alfred sync.
+
+Sync Desktop with Dropbox.
