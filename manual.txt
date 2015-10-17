@@ -1,0 +1,18 @@
+Manually install the following applications. When complete, open 'Xcode.app' to
+install the command line tools. Do so before executing 'install.sh', which
+relies on the command line tools.
+
+Mac App Store:
+	1Password.app
+	AppDelete Lite.app
+	Clear.app
+	Dash.app
+	Keynote.app
+	Monity.app
+	Numbers.app
+	Pages.app
+	Pixelmator.app
+	Soulver.app
+	Tweetbot.app
+	Type2Phone.app
+	Xcode.app
