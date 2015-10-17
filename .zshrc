@@ -17,7 +17,6 @@ plugins=(git brew brew-cask npm golang)
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
-
 ########################
 # Custom configuration #
 ########################
