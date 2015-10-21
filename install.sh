@@ -7,7 +7,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install Homebrew packages.
-brew install node go fasd mackup zsh-syntax-highlighting
+brew install node012 go fasd mackup zsh-syntax-highlighting
 brew install --HEAD fzf
 /usr/local/Cellar/fzf/HEAD/install
 
