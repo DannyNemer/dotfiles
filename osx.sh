@@ -82,6 +82,8 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 # Show the ~/Library folder.
 chflags nohidden ~/Library
+# Set desktop background.
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/Danny/Dropbox/Projects/config/wallpapers/wallpaper with black menubar.png"'
 
 ###################
 # Dock, Dashboard #
@@ -108,8 +110,11 @@ defaults write com.apple.menuextra.battery ShowPercent -bool true
 defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm:ss a"
 
 ###################
-# Third-Party     #
+# Applications    #
 ###################
+
+# Use plaintext mode as defaul in TextEdit.app.
+defaults write com.apple.TextEdit RichText -int 0
 
 # Use 2-space tabs and wrap text in QuickLook for code files.
 defaults write org.n8gray.QLColorCode extraHLFlags '-t 2 -W'

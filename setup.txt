@@ -30,5 +30,5 @@ Setup Alfred sync.
 
 Sync Desktop with Dropbox.
 
-Configure OS settings:
+Configure OS settings (after setting up Dropbox with finder wallpaper):
 	sh osx.sh
