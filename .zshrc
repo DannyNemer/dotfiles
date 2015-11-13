@@ -12,7 +12,7 @@ ZSH_THEME='robbyrussell'
 HIST_STAMPS='yyyy-mm-dd'
 
 # Set oh-my-zsh plugins.
-plugins=(git brew brew-cask npm golang)
+plugins=(git brew brew-cask npm)
 
 # Load oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
