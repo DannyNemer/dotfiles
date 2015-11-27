@@ -26,12 +26,37 @@ HISTSIZE=100000
 # Number of lines to save in a sessions.
 SAVEHIST=100000
 
-# Delete old recorded entry if new entry is a duplicate.
+# Write the history file in the ':start:elapsed;command' format.
+setopt EXTENDED_HISTORY
+# Write to the history file immediately, not when the shell exits.
+setopt INC_APPEND_HISTORY
+# Share history between all sessions.
+setopt SHARE_HISTORY
+# Expire a duplicate event first when trimming history.
+setopt HIST_EXPIRE_DUPS_FIRST
+# Do not record an event that was just recorded again.
+setopt HIST_IGNORE_DUPS
+# Delete an old recorded event if a new event is a duplicate.
 setopt HIST_IGNORE_ALL_DUPS
-# Prevent duplicate entries in the history file.
+# Do not display a previously found event.
+setopt HIST_FIND_NO_DUPS
+# Do not write a duplicate event to the history file.
 setopt HIST_SAVE_NO_DUPS
+# Do not record an event starting with a space.
+setopt HIST_IGNORE_SPACE
 # Remove superfluous blanks before recording entry.
 setopt HIST_REDUCE_BLANKS
+# Do not execute immediately upon history expansion.
+setopt HIST_VERIFY
+
+# Auto changes to a directory without typing cd.
+setopt AUTO_CD
+# Push the old directory onto the stack on cd.
+setopt AUTO_PUSHD
+# Do not store duplicates in the stack.
+setopt PUSHD_IGNORE_DUPS
+# Change directory to a path stored in a variable.
+setopt CDABLE_VARS
 
 # Load shell dotfiles.
 for file in $HOME/.{aliases,exports,functions}; do
