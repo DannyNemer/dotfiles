@@ -39,6 +39,7 @@ alias gdca='git diff --cached'
 alias gbl='git blame -b -s -w'
 alias gco='git checkout'
 alias gcm='git checkout master'
+alias gb='git branch'
 
 # Fasd.
 alias v='f -e vim'
