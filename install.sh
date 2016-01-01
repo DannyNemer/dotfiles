@@ -12,7 +12,6 @@ brew install --HEAD fzf
 /usr/local/Cellar/fzf/HEAD/install
 
 # Install GUI programs.
-brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew cask install airmail-beta alfred bettertouchtool dropbox github-desktop google-chrome iterm2 kaleidoscope mathtype spotify sublime-text3
 
