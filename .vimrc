@@ -27,3 +27,6 @@ set title
 
 " Enable spell check for git commits.
 autocmd Filetype gitcommit setlocal spell
+
+" Ignore whitespace in `vimdiff`.
+set diffopt+=iwhite
