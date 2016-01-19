@@ -30,7 +30,7 @@ defaults write NSGlobalDomain AppleInterfaceStyle "Dark"
 # Disable audio beep feedback when volume is changed.
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool false
 
-# Retore open documents and windows when re-opening apps.
+# Restore open documents and windows when re-opening apps.
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
 
 # Set global keyboard shortcut: shift+command+v -> "Paste and Match Style".
@@ -42,7 +42,7 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Automatically quit printer app once the print jobs complete.
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# Disable the “Are you sure you want to open this application?” dialog.
+# Disable the "Are you sure you want to open this application?" dialog.
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable shadow in screenshots.
@@ -102,7 +102,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Menu Bar        #
 ###################
 
-# Use these menu bar items, in this left-to-right oredr: Airport, Battery, Clock.
+# Use these menu bar items, in this left-to-right order: Airport, Battery, Clock.
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
 # Show percentage in Battery menu bar item.
 defaults write com.apple.menuextra.battery ShowPercent -bool true
@@ -113,7 +113,7 @@ defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm:ss a"
 # Applications    #
 ###################
 
-# Use plaintext mode as defaul in TextEdit.app.
+# Use plain-text mode as default in TextEdit.app.
 defaults write com.apple.TextEdit RichText -int 0
 
 # Use 2-space tabs and wrap text in QuickLook for code files.
