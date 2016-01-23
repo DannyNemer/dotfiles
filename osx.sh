@@ -68,6 +68,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Enable power chime sound effect.
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true && open /System/Library/CoreServices/PowerChime.app
 
+# Display Crash Reporter as a notification.
+defaults write com.apple.CrashReporter UseUNC 1
+
 ###################
 # Finder          #
 ###################
