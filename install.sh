@@ -23,7 +23,7 @@ brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
 # Install global npm packages.
-npm install --global trash-cli node-inspector
+npm install --global trash-cli devtool
 
 # Install pip.
 sudo easy_install pip
