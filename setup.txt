@@ -2,6 +2,7 @@ Manually install the following applications. When complete, open 'Xcode.app' to
 install the command line tools. Do so before executing 'install.sh', which
 relies on the command line tools.
 	1Password.app
+	Airmail.app
 	AppDelete Lite.app
 	Clear.app
 	Dash.app
