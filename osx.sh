@@ -127,3 +127,6 @@ defaults write org.n8gray.QLColorCode font SourceCodePro-Medium
 defaults write com.github.GitHub NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write com.github.GitHub NSAutomaticDashSubstitutionEnabled -bool false
 defaults write com.github.GitHub NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable App Nap for Spotify to prevent it from pausing while in background.
+defaults write com.spotify.client NSAppSleepDisabled -bool YES
