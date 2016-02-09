@@ -1,12 +1,13 @@
+[user]
+	name = Danny Nemer
+	email = hi@DannyNemer.com
+
 [core]
 	# Use better-looking diffs.
 	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 	excludesfile = /Users/Danny/.gitignore
 	editor = /usr/bin/vim
 
-[user]
-	name = Danny Nemer
-	email = hi@DannyNemer.com
 
 [push]
 	default = simple
