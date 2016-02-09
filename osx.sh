@@ -55,12 +55,6 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in.
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
-# Use plain text mode for new TextEdit documents.
-defaults write com.apple.TextEdit RichText -bool false
-
-# Disable automatic emoji substitution in Messages.app.
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
-
 # Require password immediately after sleep or screen saver begins.
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -116,10 +110,13 @@ defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm:ss a"
 # Applications    #
 ###################
 
-# Use plain-text mode as default in TextEdit.app.
-defaults write com.apple.TextEdit RichText -int 0
+# Use plain text mode for new TextEdit.app documents.
+defaults write com.apple.TextEdit RichText -bool false
 
-# Prevent iTunes from responding to the keyboard media keys.
+# Disable automatic emoji substitution in Messages.app.
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+
+# Prevent iTunes.app from responding to the keyboard media keys.
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 # Use 2-space tabs and wrap text in QuickLook for code files.
@@ -131,5 +128,5 @@ defaults write com.github.GitHub NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write com.github.GitHub NSAutomaticDashSubstitutionEnabled -bool false
 defaults write com.github.GitHub NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Disable App Nap for Spotify to prevent it from pausing while in background.
+# Disable App Nap for Spotify.app to prevent it from pausing while in background.
 defaults write com.spotify.client NSAppSleepDisabled -bool YES
