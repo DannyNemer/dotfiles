@@ -10,8 +10,8 @@ alias sleepnow='pmset sleepnow'
 # Reloads the shell (i.e., invokes as a login shell).
 alias reload='exec $SHELL -l'
 
-# List all files in long format, including hidden directories, with file size unit suffixes, and colorized.
-alias l='ls -lahG'
+# List all files in long format, including hidden directories (excluding . and ..), with file size unit suffixes, and colorized.
+alias l='ls -lAhG'
 
 # Git.
 alias ga='git add --verbose'
