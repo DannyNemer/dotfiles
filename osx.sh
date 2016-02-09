@@ -119,6 +119,9 @@ defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm:ss a"
 # Use plain-text mode as default in TextEdit.app.
 defaults write com.apple.TextEdit RichText -int 0
 
+# Prevent iTunes from responding to the keyboard media keys.
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
 # Use 2-space tabs and wrap text in QuickLook for code files.
 defaults write org.n8gray.QLColorCode extraHLFlags '-t 2 -W'
 defaults write org.n8gray.QLColorCode font SourceCodePro-Medium
