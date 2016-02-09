@@ -1,6 +1,6 @@
 [core]
-	# Set tab width for git diff to 2 spaces.
-	pager = less -x2
+	# Use better-looking diffs.
+	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 	excludesfile = /Users/Danny/.gitignore
 	editor = /usr/bin/vim
 
