@@ -3,6 +3,9 @@
 # Install Oh-My-Zsh.
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Install zsh-autosuggestions.
+git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
 # Install Homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

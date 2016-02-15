@@ -70,5 +70,8 @@ eval "$(fasd --init auto)"
 # fzf.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Autosuggestions.
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Syntax highlighting.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
