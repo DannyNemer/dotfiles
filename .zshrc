@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set oh-my-zsh theme.
 ZSH_THEME='robbyrussell'
 
-# Display command execution time stamp in `history` output. This requires oh-my-zsh.
+# Display command execution time stamp in `history` output. Requires oh-my-zsh.
 HIST_STAMPS='yyyy-mm-dd'
 
 # Set oh-my-zsh plugins.
