@@ -10,7 +10,7 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestion
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install Homebrew packages.
-brew install node go fasd mackup htop zsh-syntax-highlighting
+brew install node fasd mackup htop zsh-syntax-highlighting
 brew install --HEAD fzf
 /usr/local/Cellar/fzf/HEAD/install
 
