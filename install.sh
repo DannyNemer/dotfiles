@@ -16,7 +16,7 @@ brew install --HEAD fzf
 
 # Install GUI programs.
 brew tap caskroom/versions
-brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2 kaleidoscope mathtype spotify sublime-text3
+brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta kaleidoscope mathtype spotify sublime-text3
 
 # Install Quick Look plugins.
 brew cask install suspicious-package qlcolorcode qlmarkdown qlstephen quicklook-json
