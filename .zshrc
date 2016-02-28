@@ -11,7 +11,7 @@ ZSH_THEME='robbyrussell'
 # Display command execution time stamp in `history` output. Requires oh-my-zsh.
 HIST_STAMPS='yyyy-mm-dd'
 
-# Set oh-my-zsh plugins.
+# Load oh-my-zsh plugins.
 plugins=(git brew brew-cask npm)
 
 # Load oh-my-zsh.
