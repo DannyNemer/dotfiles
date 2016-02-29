@@ -10,7 +10,7 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestion
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install GUI programs.
-# Must install java before elasticsearch, which is installed with Homebrew packages below.
+# Must install Java before Elasticsearch, which is installed with Homebrew packages below.
 brew tap caskroom/versions
 brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype spotify sublime-text3
 
