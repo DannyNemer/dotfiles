@@ -9,14 +9,15 @@ git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestion
 # Install Homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install GUI programs.
+# Must install java before elasticsearch, which is installed with Homebrew packages below.
+brew tap caskroom/versions
+brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype spotify sublime-text3
+
 # Install Homebrew packages.
-brew install node fasd mackup htop zsh-syntax-highlighting
+brew install elasticsearch fasd htop mackup node zsh-syntax-highlighting
 brew install --HEAD fzf
 /usr/local/Cellar/fzf/HEAD/install
-
-# Install GUI programs.
-brew tap caskroom/versions
-brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta kaleidoscope mathtype spotify sublime-text3
 
 # Install Quick Look plugins.
 brew cask install suspicious-package qlcolorcode qlmarkdown qlstephen quicklook-json
