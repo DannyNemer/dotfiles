@@ -13,6 +13,9 @@ alias reload='exec $SHELL -l'
 # List all files in long format, including hidden directories (excluding . and ..), with file size unit suffixes, and colorized.
 alias l='ls -lAhG'
 
+# Colorize grep matches.
+alias grep='grep --color=always'
+
 # Git.
 alias ga='git add --verbose'
 alias gau='git add --verbose --update'
@@ -43,7 +46,7 @@ alias gco='git checkout'
 alias gcm='git checkout master'
 alias gb='git branch'
 
-# Fasd.
+# fasd.
 alias v='f -e vim'
 alias o='a -e open'
 alias st='f -e subl'
