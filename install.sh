@@ -15,7 +15,7 @@ brew tap caskroom/versions
 brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype spotify sublime-text3
 
 # Install Homebrew packages.
-brew install elasticsearch kibana fasd htop mackup node zsh-syntax-highlighting
+brew install elasticsearch kibana fasd htop jq mackup node zsh-syntax-highlighting
 brew install --HEAD fzf
 /usr/local/Cellar/fzf/HEAD/install
 
