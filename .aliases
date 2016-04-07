@@ -7,7 +7,7 @@ alias mute='osascript -e "set volume output muted not (output muted of (get volu
 # Puts system to sleep.
 alias sleepnow='pmset sleepnow'
 
-# Reloads the shell (i.e., invokes as a login shell).
+# Reloads the shell.
 alias reload='exec $SHELL -l'
 
 # List all files in long format, including hidden directories (excluding . and ..), with file size unit suffixes, and colorized.
