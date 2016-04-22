@@ -94,6 +94,8 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock autohide -bool true
 # Disable Dashboard.
 defaults write com.apple.dashboard mcx-disabled -bool true
+# Do not automatically rearrange Spaces using MRU.
+defaults write com.apple.dock mru-spaces -bool false
 
 ###################
 # Menu Bar        #
