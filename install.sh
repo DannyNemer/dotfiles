@@ -12,7 +12,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install GUI programs.
 # Must install Java before Elasticsearch, which is installed with Homebrew packages below.
 brew tap caskroom/versions
-brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype spotify sublime-text3
+brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text3
 
 # Install Homebrew packages.
 brew install elasticsearch kibana fasd htop jq mackup node zsh-syntax-highlighting
