@@ -15,3 +15,5 @@ My meticulously crafted dotfiles. I will slowly construct this repo from my exis
 - `vol $number` Sets system volume to `$number` on a scale of 0 to 10.
 
 - `odb` Opens current directory on Dropbox.com (if it is in your Dropbox folder), with deleted files visible. This is useful for file recovery.
+
+- `gitstats` Prints the number of commits of the current repository for each day of past 7 weeks.
