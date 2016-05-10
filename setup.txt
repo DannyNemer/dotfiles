@@ -6,6 +6,7 @@ relies on the command line tools.
 	AppDelete Lite.app
 	Clear.app
 	Dash.app
+	GIF Brewery 3.app
 	Monity.app
 	Pixelmator.app
 	Soulver.app
