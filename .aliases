@@ -10,7 +10,7 @@ alias sleepnow='pmset sleepnow'
 # Reloads the shell.
 alias reload='exec $SHELL -l'
 
-# List all files in long format, including hidden directories (excluding . and ..), with file size unit suffixes, and colorized.
+# Lists all files in long format, including hidden directories (excluding . and ..), with file size unit suffixes, and colorized.
 alias l='ls -lAhG'
 
 # Colorize grep matches.
@@ -51,7 +51,7 @@ alias v='f -e vim'
 alias o='a -e open'
 alias st='f -e subl'
 
-# Upgrade all brew packages.
+# Upgrades all brew packages.
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
 
 # Builtin.
