@@ -18,6 +18,7 @@ alias grep='grep --color=always'
 
 # Git.
 alias ga='git add --verbose'
+alias gap='git add --verbose --patch'
 alias gau='git add --verbose --update'
 alias gc='git commit --verbose'
 alias gca='git commit --verbose --amend'
