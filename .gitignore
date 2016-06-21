@@ -6,3 +6,6 @@
 
 # NPM packages.
 /node_modules
+
+# Running `vimdiff` instances.
+*.swp
