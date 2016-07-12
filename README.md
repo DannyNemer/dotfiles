@@ -16,4 +16,4 @@ My meticulously crafted dotfiles. I will slowly construct this repo from my exis
 
 - `odb` Opens current directory on Dropbox.com (if it is in your Dropbox folder), with deleted files visible. This is useful for file recovery.
 
-- `gitstats` Prints the number of commits of the current repository for each day of past 7 weeks.
+- `gitstats` Prints the number of commits to the current directory's repository for each of the past 7 days.
