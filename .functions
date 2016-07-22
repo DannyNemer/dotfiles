@@ -19,3 +19,8 @@ function odb() {
 function cat() {
 	pygmentize -O style=monokai -f console256 -g ${1} | expand -t4
 }
+
+# Prints the number of commits to the current directory's repository for each of the past `$num_days` days
+function gitstats() {
+	git log --since="${1:-7} days ago" | grep Date: | awk '{print " : "$4" "$3" "$6}' | uniq -c | tail -r
+}

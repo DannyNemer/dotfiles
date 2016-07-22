@@ -47,9 +47,6 @@ alias gco='git checkout'
 alias gcm='git checkout master'
 alias gb='git branch'
 
-# Prints the number of commits to the current directory's repository for each of the past 7 days.
-alias gitstats='git log --since="1 week ago" | grep Date: | awk '"'"'{print " : "$4" "$3" "$6}'"'"' | uniq -c | tail -r'
-
 # fasd.
 alias v='f -e vim'
 alias o='a -e open'
