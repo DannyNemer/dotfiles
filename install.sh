@@ -37,6 +37,3 @@ sudo easy_install pip
 
 # Install pip packages.
 sudo pip install grip
-
-# Install gems.
-sudo gem install fit-commit
