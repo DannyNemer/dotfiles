@@ -27,6 +27,9 @@ defaults write NSGlobalDomain AppleLocale en_US_POSIX
 # Use dark menu bar, Dock, and Spotlight.
 defaults write NSGlobalDomain AppleInterfaceStyle "Dark"
 
+# Disable translucency in the menu bar, side bars, and elsewhere.
+defaults write com.apple.universalaccess reduceTransparency -bool true
+
 # Disable audio beep feedback when volume is changed.
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool false
 
