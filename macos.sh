@@ -104,6 +104,8 @@ defaults write com.apple.dock mru-spaces -bool false
 # Menu Bar        #
 ###################
 
+# Automatically hide and show the menu bar.
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
 # Use these menu bar items, in this left-to-right order: Airport, Battery, Clock.
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
 # Show percentage in Battery menu bar item.
