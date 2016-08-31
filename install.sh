@@ -34,6 +34,11 @@ npm install --global trash-cli devtool diff-so-fancy
 
 # Install pip.
 sudo easy_install pip
+sudo easy_install --upgrade six
 
 # Install pip packages.
 sudo pip install grip
+
+# Install TensorFlow, CPU only, for Python 2.7.
+# Ignore six because pip attempts to update the out-of-date version built-in to macOS and fails because System Integrity Protection prevents anything (even root) from modifying its directory.
+sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0rc0-py2-none-any.whl --ignore-installed six
