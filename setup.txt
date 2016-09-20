@@ -1,6 +1,4 @@
-Manually install the following applications. When complete, open 'Xcode.app' to
-install the command line tools. Do so before executing 'install.sh', which
-relies on the command line tools.
+Install Mac App Store applications. When complete, open Xcode to install command line tools. Do so before executing `install.sh`, which relies on the command line tools.
 	1Password.app
 	Airmail.app
 	AppDelete Lite.app
@@ -17,9 +15,9 @@ relies on the command line tools.
 Install packages:
 	sh install.sh
 
-Setup Dropbox (after installing via brew).
+Setup Dropbox (after installing via `brew`).
 
-Create symbolic links:
+Create symbolic links for dotfiles:
 	sh link.sh
 
 Restore application preferences:
@@ -29,5 +27,5 @@ Setup Alfred sync.
 
 Sync Desktop with Dropbox.
 
-Configure OS settings (after setting up Dropbox with finder wallpaper):
+Configure OS settings (after setting up Dropbox with Finder wallpaper):
 	sh macos.sh
