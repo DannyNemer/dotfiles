@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Install Oh-My-Zsh.
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install zsh-autosuggestions.
 git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
