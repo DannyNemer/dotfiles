@@ -23,7 +23,7 @@ brew install --HEAD fzf
 kibana plugin --install elastic/sense
 
 # Install Quick Look plugins.
-brew cask install suspicious-package qlcolorcode qlmarkdown qlstephen quicklook-json
+brew cask install qlcolorcode qlmarkdown qlstephen quicklook-json
 
 # Install fonts.
 brew tap caskroom/fonts
