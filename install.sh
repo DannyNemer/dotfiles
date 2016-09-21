@@ -15,9 +15,10 @@ brew tap caskroom/versions
 brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
 
 # Install Homebrew packages.
-brew install elasticsearch kibana fasd htop jq mackup node zsh-syntax-highlighting
-brew install --HEAD fzf
-/usr/local/Cellar/fzf/HEAD/install
+brew install elasticsearch kibana fasd fzf htop jq mackup node zsh-syntax-highlighting
+
+# Install fzf shell extensions.
+/usr/local/opt/fzf/install
 
 # Install Sense for Elasticsearch.
 kibana plugin --install elastic/sense
