@@ -76,6 +76,8 @@ defaults write com.apple.CrashReporter UseUNC 1
 defaults write com.apple.finder QLEnableTextSelection -bool true
 # Use list view in all Finder windows by default.
 defaults write com.apple.finder FXPreferredViewStyle clmv
+# Keep folders on top when sorting by name.
+defaults write com.apple.finder _FXSortFoldersFirst true
 # Disable the warning before emptying the Trash.
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Empty Trash securely by default.
