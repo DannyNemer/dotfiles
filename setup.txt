@@ -29,3 +29,5 @@ Sync Desktop with Dropbox.
 
 Configure OS settings (after setting up Dropbox with Finder wallpaper):
 	sh macos.sh
+
+Sign in: Google Chrome, Spotify, RescueTime.
