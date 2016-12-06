@@ -1,17 +1,3 @@
-Install Mac App Store applications. When complete, open Xcode to install command line tools. Do so before executing `install.sh`, which relies on the command line tools.
-	1Password.app
-	Airmail.app
-	AppDelete Lite.app
-	Clear.app
-	Dash.app
-	GIF Brewery 3.app
-	Monity.app
-	Pixelmator.app
-	Soulver.app
-	Tweetbot.app
-	Type2Phone.app
-	Xcode.app
-
 Install packages:
 	sh install.sh
 
@@ -29,5 +15,19 @@ Sync Desktop with Dropbox.
 
 Configure OS settings (after setting up Dropbox with Finder wallpaper):
 	sh macos.sh
+
+Install Mac App Store applications:
+	1Password.app
+	Airmail.app
+	AppDelete Lite.app
+	Clear.app
+	Dash.app
+	GIF Brewery 3.app
+	Monity.app
+	Pixelmator.app
+	Soulver.app
+	Tweetbot.app
+	Type2Phone.app
+	Xcode.app
 
 Sign in: Google Chrome, Spotify, RescueTime.
