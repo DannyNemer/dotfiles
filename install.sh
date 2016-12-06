@@ -18,7 +18,7 @@ brew tap caskroom/versions
 brew cask install alfred bettertouchtool dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
 
 # Install Homebrew packages.
-brew install elasticsearch kibana fasd fzf htop jq mackup node zsh-syntax-highlighting
+brew install elasticsearch kibana fasd fzf htop jq mackup node python zsh-syntax-highlighting
 
 # Install fzf shell extensions.
 /usr/local/opt/fzf/install
@@ -36,13 +36,10 @@ brew cask install font-source-code-pro
 # Install global npm packages.
 npm install --global trash-cli devtool diff-so-fancy
 
-# Install pip.
-sudo easy_install pip
-sudo easy_install --upgrade six
-
 # Install pip packages.
 sudo pip install grip sklearn
 
 # Install TensorFlow, CPU only, for Python 2.7.
 # Ignore six because pip attempts to update the out-of-date version built-in to macOS and fails because System Integrity Protection prevents anything (even root) from modifying its directory.
+sudo easy_install --upgrade six
 sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0rc0-py2-none-any.whl --ignore-installed six
