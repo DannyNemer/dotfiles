@@ -6,7 +6,7 @@ xcode-select install
 # Install Oh-My-Zsh.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install zsh-autosuggestions.
+# Install `zsh-autosuggestions`.
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 # Install Homebrew.
@@ -20,7 +20,7 @@ brew cask install alfred bettertouchtool dropbox github-desktop google-chrome it
 # Install Homebrew packages.
 brew install elasticsearch kibana fasd fzf htop jq mackup node python zsh-syntax-highlighting
 
-# Install fzf shell extensions.
+# Install `fzf` shell extensions.
 /usr/local/opt/fzf/install
 
 # Install Sense for Elasticsearch.
@@ -33,7 +33,7 @@ brew cask install qlcolorcode qlmarkdown qlstephen quicklook-json
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
-# Install global npm packages.
+# Install global `npm` packages.
 npm install --global trash-cli devtool diff-so-fancy
 
 # Install pip packages.
