@@ -33,6 +33,10 @@ brew cask install qlcolorcode qlmarkdown qlstephen quicklook-json
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
+# Install Python libraries with external dependencies that `pip` does not know how to handle. Both installations install the packages into the directory `pip` uses (`/usr/local/lib/python2.7/site-packages`) and are includes in `pip list`.
+brew tap homebrew/python
+brew install numpy
+
 # Install global `npm` packages.
 npm install --global trash-cli devtool diff-so-fancy
 
