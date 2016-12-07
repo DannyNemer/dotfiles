@@ -37,4 +37,4 @@ brew cask install font-source-code-pro
 npm install --global trash-cli devtool diff-so-fancy
 
 # Install pip packages.
-sudo pip install grip sklearn
+sudo pip install grip
