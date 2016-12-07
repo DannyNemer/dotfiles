@@ -37,4 +37,5 @@ brew cask install font-source-code-pro
 npm install --global trash-cli devtool diff-so-fancy
 
 # Install pip packages.
-sudo pip install grip
+# Note: Can alternatively install `grip` with `brew`, however, `brew` would install its Python package dependencies in a sub-folder that only `grip` can access. This excludes the dependencies from normal `pip` upgrade operations and use by other programs. For example, `grip` has the dependency `pygmentize`, which the `cat` (overloading) function also needs and can not access from the `brew` installation of `grip`.
+pip install grip
