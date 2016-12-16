@@ -21,7 +21,6 @@ Install Mac App Store applications:
 	Airmail.app
 	AppDelete Lite.app
 	Clear.app
-	Dash.app
 	GIF Brewery 3.app
 	Monity.app
 	Pixelmator.app
