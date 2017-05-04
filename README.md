@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles, which I will gradually construct in the depths of the nights, after meaningful work has exhausted my cognitive resources.
+My dotfiles, which I will gradually construct in the depths of the nights after meaningful work has exhausted me.
 
 ### Novelties:
 - `git restore-dates [$number]` Restores the commit dates to corresponding author dates of the `$number` most recent commits, or all commits if `$number` is undefined. This is useful after a `git-rebase`.
