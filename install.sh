@@ -19,7 +19,7 @@ brew cask install alfred bettertouchtool dash dropbox github-desktop google-chro
 
 # Install Homebrew packages.
 # Install Python via brew to properly configure `setuptools` and `pip` on the user site to not require root access.
-brew install elasticsearch kibana fasd fzf htop jq mackup node python zsh-syntax-highlighting
+brew install elasticsearch kibana fasd fzf heroku htop jq mackup node python zsh-syntax-highlighting
 
 # Install `fzf` shell extensions.
 /usr/local/opt/fzf/install
