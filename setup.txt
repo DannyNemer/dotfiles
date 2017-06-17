@@ -23,6 +23,7 @@ Install Mac App Store applications:
 	Monity.app
 	Pixelmator.app
 	Soulver.app
+	Things.app
 	Tweetbot.app
 	Type2Phone.app
 	Xcode.app
