@@ -18,7 +18,7 @@ brew tap caskroom/versions
 brew cask install alfred bettertouchtool dash dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
 
 # Install Homebrew packages.
-# Install Python via brew to properly configure `setuptools` and `pip` on the user site, which does not require root access.
+# Install Python via brew to properly configure `setuptools` and `pip2` on the user site, which does not require root access.
 brew install elasticsearch kibana fasd fzf heroku htop jq mackup node python zsh-syntax-highlighting
 
 # Install `fzf` shell extensions.
@@ -34,7 +34,7 @@ brew cask install qlcolorcode qlmarkdown qlstephen quicklook-json
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
 
-# Install Python libraries with external dependencies that `pip` does not know how to handle. Both installations install the packages into the directory `pip` uses (`/usr/local/lib/python2.7/site-packages`) and are includes in `pip list`.
+# Install Python libraries with external dependencies that `pip2` does not know how to handle. Both installations install the packages into the directory `pip2` uses (`/usr/local/lib/python2.7/site-packages`) and are includes in `pip2 list`.
 brew tap homebrew/python
 brew install numpy
 
@@ -42,5 +42,5 @@ brew install numpy
 npm install --global trash-cli devtool diff-so-fancy
 
 # Install pip packages.
-# Note: Can alternatively install `grip` with `brew`, however, `brew` would install its Python package dependencies in a sub-folder that only `grip` can access. This excludes the dependencies from normal `pip` upgrade operations and prevents other programs from accessing them. For example, `grip` has the dependency `pygmentize`, which the `cat` (overloading) function also needs and can not access from the `brew` installation of `grip`.
-pip install grip
+# Note: Can alternatively install `grip` with `brew`, however, `brew` would install its Python package dependencies in a sub-folder that only `grip` can access. This excludes the dependencies from normal `pip2` upgrade operations and prevents other programs from accessing them. For example, `grip` has the dependency `pygmentize`, which the `cat` (overloading) function also needs and can not access from the `brew` installation of `grip`.
+pip2 install grip
