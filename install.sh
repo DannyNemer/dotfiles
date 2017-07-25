@@ -18,7 +18,7 @@ brew tap caskroom/versions
 brew cask install alfred bettertouchtool dash dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
 
 # Install Homebrew packages.
-# Install Python via brew to properly configure `setuptools` and `pip` on the user site to not require root access.
+# Install Python via brew to properly configure `setuptools` and `pip` on the user site, which does not require root access.
 brew install elasticsearch kibana fasd fzf heroku htop jq mackup node python zsh-syntax-highlighting
 
 # Install `fzf` shell extensions.
