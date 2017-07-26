@@ -5,7 +5,11 @@
 [core]
 	excludesfile = /Users/Danny/.gitignore
 	editor = /usr/bin/vim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[pager]
+	#	Do not use `diff-so-fancy` for `log` pager.
+	show = diff-so-fancy | less --tabs=4 -RFX
+	diff = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 	ui = true
