@@ -29,6 +29,10 @@
 [push]
 	default = simple
 
+[log]
+ # Act as if the `--follow` option is used (when a single <path> is given) to continue listing the history of the file beyond renames.
+	follow = true
+
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
