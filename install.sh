@@ -15,7 +15,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install GUI programs.
 # Must install `java` with `brew-cask` before `brew` installs `elasticsearch` below.
 brew tap caskroom/versions
-brew cask install alfred bettertouchtool chatology dash dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
+brew cask install alfred atom bettertouchtool chatology dash dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
 
 # Install Homebrew packages.
 # Install Python via brew to properly configure `setuptools` and `pip2` on the user site, which does not require root access.
