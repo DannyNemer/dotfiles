@@ -13,19 +13,15 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggesti
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install GUI programs.
-# Must install `java` with `brew-cask` before `brew` installs `elasticsearch` below.
 brew tap caskroom/versions
-brew cask install alfred atom bettertouchtool chatology dash dropbox github-desktop google-chrome iterm2-beta java kaleidoscope mathtype rescuetime spotify sublime-text
+brew cask install alfred atom bettertouchtool chatology dash dropbox github-desktop google-chrome iterm2-beta kaleidoscope mathtype rescuetime spotify sublime-text
 
 # Install Homebrew packages.
 # Install Python via brew to properly configure `setuptools` and `pip2` on the user site, which does not require root access.
-brew install elasticsearch kibana fasd fzf heroku htop jq mackup node python zsh-syntax-highlighting
+brew install fasd fzf heroku htop jq mackup node python zsh-syntax-highlighting
 
 # Install `fzf` shell extensions.
 /usr/local/opt/fzf/install
-
-# Install Sense for Elasticsearch.
-kibana plugin --install elastic/sense
 
 # Install Quick Look plugins.
 brew cask install qlcolorcode qlmarkdown qlstephen quicklook-json
