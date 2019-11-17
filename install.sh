@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Install Xcode command line tools. Must be first installation.
-xcode-select install
+xcode-select --install
 
 # Install Oh-My-Zsh.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
