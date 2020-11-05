@@ -1,7 +1,7 @@
 Install packages:
 	sh install.sh
 
-Setup Dropbox (after installing via `brew`).
+Set up Dropbox (after installing via `brew`).
 
 Create symbolic links for dotfiles:
 	sh link.sh
@@ -9,7 +9,7 @@ Create symbolic links for dotfiles:
 Restore application preferences:
 	mackup restore
 
-Setup Alfred sync.
+Set up Alfred sync.
 
 Sync Desktop with Dropbox.
 
@@ -17,15 +17,7 @@ Configure OS settings (after setting up Dropbox with Finder wallpaper):
 	sh macos.sh
 
 Install Mac App Store applications:
-	1Password.app
-	AppDelete Lite.app
-	Clear.app
-	Monity.app
 	Pixelmator.app
-	Soulver.app
-	Things.app
-	Tweetbot.app
-	Type2Phone.app
 	Xcode.app
 
-Sign in: Google Chrome, Spotify, RescueTime.
+Sign in: Google Chrome, Spotify, RescueTime, VS Code.
