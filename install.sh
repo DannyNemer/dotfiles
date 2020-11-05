@@ -6,37 +6,14 @@ xcode-select --install
 # Install Oh-My-Zsh.
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install `zsh-autosuggestions`.
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-
 # Install Homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install GUI programs.
-brew tap caskroom/versions
-brew cask install alfred atom bettertouchtool chatology dash dropbox github-desktop google-chrome iterm2-beta kaleidoscope mathtype rescuetime spotify sublime-text
+brew install 1password alfred appcleaner bettertouchtool dash docker dropbox font-menlo-for-powerline gitup google-chrome istat-menus iterm2-beta kaleidoscope postgres rescuetime slack spotify tableplus visual-studio-code zoomus
 
 # Install Homebrew packages.
-# Install Python via brew to properly configure `setuptools` and `pip2` on the user site, which does not require root access.
-brew install fasd fzf heroku htop jq mackup node python zsh-syntax-highlighting
+brew install coreutils diff-so-fancy fasd fzf htop node python trash yarn zsh-autosuggestions zsh-syntax-highlighting
 
 # Install `fzf` shell extensions.
 /usr/local/opt/fzf/install
-
-# Install Quick Look plugins.
-brew cask install qlcolorcode qlmarkdown qlstephen quicklook-json
-
-# Install fonts.
-brew tap caskroom/fonts
-brew cask install font-source-code-pro
-
-# Install Python libraries with external dependencies that `pip2` does not know how to handle. Both installations install the packages into the directory `pip2` uses (`/usr/local/lib/python2.7/site-packages`) and are includes in `pip2 list`.
-brew tap homebrew/python
-brew install numpy
-
-# Install global `npm` packages.
-npm install --global trash-cli devtool diff-so-fancy
-
-# Install pip packages.
-# Note: Can alternatively install `grip` with `brew`, however, `brew` would install its Python package dependencies in a sub-folder that only `grip` can access. This excludes the dependencies from normal `pip2` upgrade operations and prevents other programs from accessing them. For example, `grip` has the dependency `pygmentize`, which the `cat` (overloading) function also needs and can not access from the `brew` installation of `grip`.
-pip2 install grip

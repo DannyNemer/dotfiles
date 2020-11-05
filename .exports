@@ -1,6 +1,0 @@
-# Set PATH.
-export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin'
-
-# Set Go PATH.
-export GOPATH=$HOME/Dropbox/Projects/go
-export PATH=$PATH:$GOPATH/bin
