@@ -64,24 +64,44 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add Postgress command line tools to PATH.
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/12/bin
 
-# Kubernetes
-export KUBECONFIG=$HOME/azure-kubeconfig-staging
+# Use Node v14
+export PATH="/usr/local/opt/node@14/bin:$PATH"
+
+################
+#  Kubernetes  #
+################
+
+# 1Password
+export KUBECONFIG=$HOME/.kube/dev-danny-config
 if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# Use VS Code as editor
+export KUBE_EDITOR='code --wait --new-window'
+
+function fetch_kconf {
+  local cluster="$1"
+  local session="$(op signin afresh_team --raw)"
+  op get item --session="${session}" --vault="IF (${cluster})" "k8s kubeconfig (${cluster})" | jq -r '.details.notesPlain' >! "${HOME}/.kube/${cluster}-config"
+}
 
 ################
 #    Python    #
 ################
 
 # Add unversioned symlinks `python` -> `python3`, `pip` -> `pip3`, etc.
-# - Must *prepend* path to $PATH to prioritize over `/usr/bin/pytho`, etc.
+# - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH=/usr/local/opt/python@3.7/bin:$PATH
 
 # Activate `afresh-core` virtual environment.
 source ~/afresh-core/af-env/bin/activate
 
 export AIRFLOW_HOME=$HOME/afresh-core/services/airflow/
+
+# Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 ################
 #   Aliases    #
@@ -106,40 +126,52 @@ alias reload='exec $SHELL -l'
 alias l='gls --color --group-directories-first -lah'
 
 # Git
+alias 'gca!'='git commit --verbose --amend --no-edit'
 alias ga='git add --verbose'
 alias gap='git add --verbose --patch'
 alias gau='git add --verbose --update'
+alias gb='git branch'
+alias gbl='git blame -b -s -w'
 alias gc='git commit --verbose'
 alias gca='git commit --verbose --amend'
-alias 'gca!'='git commit --verbose --amend --no-edit'
-alias grbi='git rebase --interactive'
-alias grbc='git rebase --continue'
-alias grba='git rebase --abort'
-alias gmt='git mergetool --no-prompt'
-alias gp='git push --verbose'
-alias gl='git pull --verbose'
-alias gsta='git stash'
-alias gstp='git stash pop'
-alias gstd='git stash drop'
-alias gstl='git stash list'
-alias gsts='git stash show --patch'
-alias gst='git status --short'
-alias glg='git log --stat --color --graph --decorate'
-alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
-alias glgrep='git log --regexp-ignore-case --grep'
-alias grlg='git reflog --date=relative'
+alias gcm='git checkout master'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='GIT_EDITOR=true git cherry-pick --continue'
 alias gd='git diff'
 alias gdca='git diff --cached'
-alias gs='git show'
-alias gbl='git blame -b -s -w'
-alias gco='git checkout'
-alias gcm='git checkout master'
-alias gb='git branch'
-alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
-alias git-comp-staging='hub compare $(git rev-parse origin/staging | cut -c 1-8)...$(git rev-parse origin/master | cut -c 1-8)'
+alias gfa='git fetch --all --prune'
 alias git-comp-prod='hub compare $(git rev-parse origin/production | cut -c 1-8)...$(git rev-parse origin/staging | cut -c 1-8)'
+alias git-comp-staging='hub compare $(git rev-parse origin/staging | cut -c 1-8)...$(git rev-parse origin/master | cut -c 1-8)'
+alias gl='git pull --verbose'
+alias glg='git log --stat --color --graph --decorate'
+alias glgrep='git log --regexp-ignore-case --grep'
+alias glol='git log --pretty="%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias gmt='git mergetool --no-prompt'
+alias gp='git push --verbose'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='GIT_EDITOR=true git rebase --continue'
+alias grbi='git rebase --interactive'
+alias grbm='git pull --rebase origin master'
+alias grhh='git reset --hard'
+alias grhm='git reset --hard origin/master'
+alias grlg='git reflog --date=relative'
+alias groh='git reset origin/$(git_current_branch) --hard'
+alias gs='git show'
+alias gst='git status --short'
+alias gsta='git stash'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gsts='git stash show --patch'
 
-alias jestf='jest --forceExit'
+# Alembic
+alias ar='alembic revision -m'
+
+gi# Terraform
+alias tf='terraform'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
