@@ -80,3 +80,5 @@
 
 [diff]
 	tool = Kaleidoscope
+[pull]
+	rebase = true

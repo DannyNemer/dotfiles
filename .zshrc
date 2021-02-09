@@ -63,11 +63,8 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Add Postgress command line tools to PATH.
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/12/bin
-
-# Use Node v14
-export PATH="/usr/local/opt/node@14/bin:$PATH"
+# Add Postgress command line tools to PATH
+export PATH=/Applications/Postgres.app/Contents/Versions/12/bin:$PATH
 
 ################
 #  Kubernetes  #
@@ -93,12 +90,10 @@ function fetch_kconf {
 # Add unversioned symlinks `python` -> `python3`, `pip` -> `pip3`, etc.
 # - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
-export PATH=/usr/local/opt/python@3.7/bin:$PATH
+# export PATH=/usr/local/opt/python@3.7/bin:$PATH
 
 # Activate `afresh-core` virtual environment.
-source ~/afresh-core/af-env/bin/activate
-
-export AIRFLOW_HOME=$HOME/afresh-core/services/airflow/
+# source ~/afresh-core/af-env/bin/activate
 
 # Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
@@ -142,8 +137,6 @@ alias gcpc='GIT_EDITOR=true git cherry-pick --continue'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gfa='git fetch --all --prune'
-alias git-comp-prod='hub compare $(git rev-parse origin/production | cut -c 1-8)...$(git rev-parse origin/staging | cut -c 1-8)'
-alias git-comp-staging='hub compare $(git rev-parse origin/staging | cut -c 1-8)...$(git rev-parse origin/master | cut -c 1-8)'
 alias gl='git pull --verbose'
 alias glg='git log --stat --color --graph --decorate'
 alias glgrep='git log --regexp-ignore-case --grep'
@@ -166,11 +159,13 @@ alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash show --patch'
+alias git-comp-prod='hub compare $(git rev-parse origin/production | cut -c 1-8)...$(git rev-parse origin/staging | cut -c 1-8)'
+alias git-comp-staging='hub compare $(git rev-parse origin/staging | cut -c 1-8)...$(git rev-parse origin/master | cut -c 1-8)'
 
 # Alembic
 alias ar='alembic revision -m'
 
-gi# Terraform
+# Terraform
 alias tf='terraform'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
