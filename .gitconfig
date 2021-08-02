@@ -82,3 +82,5 @@
 	tool = Kaleidoscope
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
