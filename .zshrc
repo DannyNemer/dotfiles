@@ -49,6 +49,9 @@ setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
 
+# Add Homebrew packages to PATH
+export PATH=/usr/local/bin:$PATH
+
 # fasd
 eval "$(fasd --init auto)"
 alias v='f -e vim'
@@ -66,13 +69,16 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add Postgress command line tools to PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/12/bin:$PATH
 
+# Use Node v12
+# export PATH=/usr/local/opt/node@12/bin:$PATH
+
 ################
 #  Kubernetes  #
 ################
 
 # 1Password
-export KUBECONFIG=$HOME/.kube/dev-danny-config
-if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
+# export KUBECONFIG=$HOME/.kube/dev-danny-config
+# if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 # Use VS Code as editor
 export KUBE_EDITOR='code --wait --new-window'
@@ -95,6 +101,8 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Activate `afresh-core` virtual environment.
 # source ~/afresh-core/af-env/bin/activate
 
+# export AIRFLOW_HOME=$HOME/afresh-core/services/airflow/
+
 # Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
@@ -104,9 +112,6 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Docker
 alias dc='docker-compose'
-
-# Moves files to ~/.Trash (enabling Finder's "Put back" feature)
-alias trash='trash -F'
 
 # Upgrades all brew packages
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
@@ -131,9 +136,6 @@ alias gc='git commit --verbose'
 alias gca='git commit --verbose --amend'
 alias gcm='git checkout master'
 alias gco='git checkout'
-alias gcp='git cherry-pick'
-alias gcpa='git cherry-pick --abort'
-alias gcpc='GIT_EDITOR=true git cherry-pick --continue'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gfa='git fetch --all --prune'
@@ -145,13 +147,13 @@ alias gmt='git mergetool --no-prompt'
 alias gp='git push --verbose'
 alias grb='git rebase'
 alias grba='git rebase --abort'
-alias grbc='GIT_EDITOR=true git rebase --continue'
+alias grbc='git rebase --continue'
 alias grbi='git rebase --interactive'
 alias grbm='git pull --rebase origin master'
 alias grhh='git reset --hard'
 alias grhm='git reset --hard origin/master'
-alias grlg='git reflog --date=relative'
 alias groh='git reset origin/$(git_current_branch) --hard'
+alias grlg='git reflog --date=relative'
 alias gs='git show'
 alias gst='git status --short'
 alias gsta='git stash'
@@ -164,6 +166,9 @@ alias git-comp-staging='hub compare $(git rev-parse origin/staging | cut -c 1-8)
 
 # Alembic
 alias ar='alembic revision -m'
+
+# Jest
+alias jestf='jest --forceExit'
 
 # Terraform
 alias tf='terraform'
