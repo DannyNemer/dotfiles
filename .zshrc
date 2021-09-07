@@ -69,8 +69,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add Postgress command line tools to PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/12/bin:$PATH
 
-# Use Node v12
-# export PATH=/usr/local/opt/node@12/bin:$PATH
 
 ################
 #  Kubernetes  #
@@ -97,11 +95,6 @@ function fetch_kconf {
 # - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # export PATH=/usr/local/opt/python@3.7/bin:$PATH
-
-# Activate `afresh-core` virtual environment.
-# source ~/afresh-core/af-env/bin/activate
-
-# export AIRFLOW_HOME=$HOME/afresh-core/services/airflow/
 
 # Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
