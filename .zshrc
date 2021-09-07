@@ -60,12 +60,6 @@ alias o='a -e open'
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Add Postgress command line tools to PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/12/bin:$PATH
 
@@ -80,6 +74,11 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# zsh-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ################
 #  Kubernetes  #
