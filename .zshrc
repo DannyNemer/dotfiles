@@ -69,6 +69,17 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add Postgress command line tools to PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/12/bin:$PATH
 
+#################
+#  Zsh Plugins  #
+#################
+
+# zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
+
 
 ################
 #  Kubernetes  #
