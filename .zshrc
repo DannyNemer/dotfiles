@@ -61,7 +61,7 @@ alias o='a -e open'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add Postgress command line tools to PATH
-export PATH=/Applications/Postgres.app/Contents/Versions/12/bin:$PATH
+export PATH=/Applications/Postgres.app/Contents/Versions/13/bin:$PATH
 
 # Add environment variables for running Android emulator
 export ANDROID_SDK=/Users/Danny/Library/Android/sdk
