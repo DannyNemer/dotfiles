@@ -1,3 +1,8 @@
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/danny/.oh-my-zsh"
 
@@ -108,7 +113,6 @@ function fetch_kconf {
 # Add unversioned symlinks `python` -> `python3`, `pip` -> `pip3`, etc.
 # - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
-# export PATH=/usr/local/opt/python@3.7/bin:$PATH
 
 # Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
@@ -182,3 +186,8 @@ alias tf='terraform'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
