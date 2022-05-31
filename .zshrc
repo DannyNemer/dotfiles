@@ -73,23 +73,6 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export ANDROID_SDK=/Users/Danny/Library/Android/sdk
 export PATH=/Users/Danny/Library/Android/sdk/platform-tools:$PATH
 
-#################
-#  Zsh Plugins  #
-#################
-
-# zsh-completions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  autoload -Uz compinit
-  compinit
-fi
-
-# zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 ################
 #  Kubernetes  #
 ################
@@ -189,6 +172,22 @@ alias jestf='jest --forceExit'
 # Terraform
 alias tf='terraform'
 
+#################
+#  Zsh Plugins  #
+#################
+
+# zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
+
+# zsh-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-syntax-highlighting (must be at the end of ~/.zshrc)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
