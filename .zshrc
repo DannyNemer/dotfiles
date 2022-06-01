@@ -104,6 +104,9 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # Add Poetry to PATH (default installation location)
 export PATH=$HOME/Library/Python/3.9/bin:$PATH
 
+# Activate Poetry virtual environment.
+source $(poetry env info --path)/bin/activate
+
 ################
 #   Aliases    #
 ################
