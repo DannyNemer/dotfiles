@@ -101,9 +101,6 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# Add Poetry to PATH (default installation location)
-export PATH=$HOME/Library/Python/3.9/bin:$PATH
-
 ################
 #   Aliases    #
 ################
