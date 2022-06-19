@@ -68,10 +68,6 @@ alias o='a -e code'
 # Add Postgress command line tools to PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
-# Add environment variables for running Android emulator
-export ANDROID_SDK=/Users/Danny/Library/Android/sdk
-export PATH=/Users/Danny/Library/Android/sdk/platform-tools:$PATH
-
 ################
 #  Kubernetes  #
 ################
