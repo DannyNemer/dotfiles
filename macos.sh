@@ -4,6 +4,9 @@
 # System          #
 ###################
 
+# Treat periods as word boundaries.
+defaults write .GlobalPreferences AppleTextBreakLocale en_US_POSIX
+
 # Disable the sound effects on boot.
 sudo nvram SystemAudioVolume=" "
 
