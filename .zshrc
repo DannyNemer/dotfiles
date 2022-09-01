@@ -100,7 +100,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export PATH=$HOME/Library/Python/3.9/bin:$PATH
 
 # Activate Poetry virtual environment.
-source ~/conductor-server/.venv/bin/activate
+# source ~/conductor-server/.venv/bin/activate
 
 ################
 #   Aliases    #
