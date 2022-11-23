@@ -19,12 +19,3 @@ function odb() {
 # function cat() {
 #	pygmentize -O style=monokai -f console256 -g ${1} | expand -t4
 # }
-
-# Prints the number of commits to the current directory's repository for each of the past `$num_days` days.
-function gitstats() {
-	# for ((i = 0; i < ${1:-7}; i++)); do
-	for ((i=$((${1:-7} - 1)); i > -1; i--)); do
-		DAY="`date -v-${i}d "+%b %d"`"
-		git rev-list --count master --after="${DAY} 00:00:00" --before="${DAY} 23:59:59" | awk -v day=$DAY '{print day ": " $1}'
-	done
-}
