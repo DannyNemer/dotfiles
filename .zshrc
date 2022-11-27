@@ -158,9 +158,8 @@ alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash show --patch'
-alias git-comp-prod='hub compare $(git rev-parse origin/production | cut -c 1-8)...$(git rev-parse origin/staging | cut -c 1-8)'
-alias git-comp-staging='hub compare $(git rev-parse origin/staging | cut -c 1-8)...$(git rev-parse origin/main | cut -c 1-8)'
 alias gweb='gh repo view --web'
+alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/production...main'
 
 # Print the number of commits to the current directory's repository for each of
 # the past `$num_days` days.
