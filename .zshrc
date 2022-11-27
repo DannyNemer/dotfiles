@@ -164,7 +164,7 @@ alias gweb='gh repo view --web'
 
 # Print the number of commits to the current directory's repository for each of
 # the past `$num_days` days.
-function commit-count() {
+function git-commit-count() {
 	for ((i=$((${1:-7} - 1)); i > -1; i--)); do
 		DAY="`date -v-${i}d "+%b %d"`"
 		git rev-list main --count --after="${DAY} 00:00:00" --before="${DAY} 23:59:59" | awk -v day=$DAY '{print day ": " $1}'
