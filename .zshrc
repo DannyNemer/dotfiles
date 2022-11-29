@@ -170,6 +170,21 @@ function git-commit-count() {
 	done
 }
 
+# First sets the head of the branch "production" to the head of "main" without switching the current branch.
+# Then prompts the user to type "yes" to confirm.
+# Then pushes the changes to origin.
+function push-to-prod() {
+  git checkout production
+  git reset --hard main
+  echo "Type 'yes' to push to production:"
+  read confirmation
+  if [ "$confirmation" = "yes" ]; then
+    git push origin production
+  fi
+  git checkout main
+}
+
+
 # Alembic
 alias ar='alembic revision -m'
 
