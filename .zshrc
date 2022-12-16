@@ -1,39 +1,9 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 
-# Prompt
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0.1
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $%{%b%f%k%F{yellow}%} %{%f%}"
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-# Add Homebrew packages to PATH
-export PATH=/usr/local/bin:$PATH
-
-# fasd
-eval "$(fasd --init auto)"
-alias o='a -e code'
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Add Postgress command line tools to PATH
-export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
-
-################
-#    Python    #
-################
-
-# Add unversioned symlinks `python` -> `python3` -> `python3.9`, `pip` -> `pip3`, etc.
-# - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
-
-################
-#   Aliases    #
-################
+#############
+#  Aliases  #
+#############
 
 # Upgrades all brew packages
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
@@ -110,9 +80,42 @@ function push-to-prod() {
   git checkout main
 }
 
-#################
-#  Zsh Plugins  #
-#################
+#############
+#  Exports  #
+#############
+
+# Set VS Code as default editor
+export EDITOR="code"
+
+# Add Homebrew packages to PATH
+export PATH=/usr/local/bin:$PATH
+
+# Add Postgress command line tools to PATH
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
+# Add unversioned symlinks `python` -> `python3` -> `python3.9`, `pip` -> `pip3`, etc.
+# - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
+###########
+#  Shell  #
+###########
+
+# Prompt
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0.1
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs time)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $%{%b%f%k%F{yellow}%} %{%f%}"
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# fasd
+eval "$(fasd --init auto)"
+alias o='a -e code'
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
