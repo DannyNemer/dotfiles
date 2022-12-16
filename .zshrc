@@ -97,13 +97,6 @@ export EDITOR="code"
 # Add Homebrew packages to PATH
 export PATH=/usr/local/bin:$PATH
 
-# Add Postgress command line tools to PATH
-export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
-
-# Add unversioned symlinks `python` -> `python3` -> `python3.9`, `pip` -> `pip3`, etc.
-# - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
-
 ###########
 #  Shell  #
 ###########
