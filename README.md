@@ -1,19 +1,31 @@
 # dotfiles
-My dotfiles, which I will gradually construct in the depths of the nights after meaningful work has exhausted me.
 
-### Novelties:
-- `git restore-dates [$number]` Restores the commit dates to corresponding author dates of the `$number` most recent commits, or all commits if `$number` is undefined. This is useful after a `git-rebase`.
+## Setup
 
-- `glgrep $pattern` Searches git commits that match `$pattern` while ignoring case.
+1. Install packages:
 
-- `swlog` Prints the timestamps of the 10 most recent sleep and wake events (for OS X portables). This answers the question, "How long have I been at the computer?"
+   ```sh
+   sh install.sh
+   ```
 
-- `mute` Toggles system volume.
+2. Set up Dropbox (after installing via `brew`).
 
-- `sleepnow` Puts system to sleep.
+3. Create symbolic links for dotfiles:
 
-- `vol $number` Sets system volume to `$number` on a scale of 0 to 10.
+   ```sh
+   sh link.sh
+   ```
 
-- `odb` Opens current directory on Dropbox.com (if it is in your Dropbox folder), with deleted files visible. This is useful for file recovery.
+4. Enable Alfred sync from Alfred preferences.
 
-- `gitstats [$num_days=7]` Prints the number of commits to the current directory's repository for each of the past `$num_days` days.
+5. Sync Desktop with Dropbox.
+
+6. Configure OS settings (after setting up Dropbox with Finder wallpaper):
+
+   ```sh
+   sh macos.sh
+   ```
+
+7. Install Mac App Store applications: Pixelmator.app
+
+8. Sign in: Google Chrome, VS Code.
