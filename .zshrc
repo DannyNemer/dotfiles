@@ -97,6 +97,9 @@ export EDITOR="code"
 # Add Homebrew packages to PATH
 export PATH="/opt/homebrew/bin:$PATH"
 
+# Add Postgres command line tools to PATH
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
 ###########
 #  Shell  #
 ###########
