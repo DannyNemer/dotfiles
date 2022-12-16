@@ -6,9 +6,6 @@ Set up Dropbox (after installing via `brew`).
 Create symbolic links for dotfiles:
 	sh link.sh
 
-Restore application preferences:
-	mackup restore
-
 Set up Alfred sync.
 
 Sync Desktop with Dropbox.
@@ -18,6 +15,5 @@ Configure OS settings (after setting up Dropbox with Finder wallpaper):
 
 Install Mac App Store applications:
 	Pixelmator.app
-	Xcode.app
 
 Sign in: Google Chrome, Spotify, RescueTime, VS Code.
