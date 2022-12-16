@@ -69,23 +69,6 @@ alias o='a -e code'
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 ################
-#  Kubernetes  #
-################
-
-# 1Password
-# export KUBECONFIG=$HOME/.kube/dev-danny-config
-# if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
-
-# Use VS Code as editor
-export KUBE_EDITOR='code --wait --new-window'
-
-function fetch_kconf {
-  local cluster="$1"
-  local session="$(op signin afresh_team --raw)"
-  op get item --session="${session}" --vault="IF (${cluster})" "k8s kubeconfig (${cluster})" | jq -r '.details.notesPlain' >! "${HOME}/.kube/${cluster}-config"
-}
-
-################
 #    Python    #
 ################
 
@@ -93,21 +76,9 @@ function fetch_kconf {
 # - Must *prepend* path to $PATH to prioritize over `/usr/bin/python`, etc.
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
-# Fix Python-OSX multi-threading issues: https://stackoverflow.com/a/52230415/1667518
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-# Add Poetry to PATH (default installation location)
-export PATH=$HOME/Library/Python/3.9/bin:$PATH
-
-# Activate Poetry virtual environment.
-# source ~/conductor-server/.venv/bin/activate
-
 ################
 #   Aliases    #
 ################
-
-# Docker
-alias dc='docker-compose'
 
 # Upgrades all brew packages
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
@@ -183,16 +154,6 @@ function push-to-prod() {
   fi
   git checkout main
 }
-
-
-# Alembic
-alias ar='alembic revision -m'
-
-# Jest
-alias jestf='jest --forceExit'
-
-# Terraform
-alias tf='terraform'
 
 #################
 #  Zsh Plugins  #
