@@ -11,7 +11,7 @@ brew install \
   fzf \
   gh \
   node \
-  powerlevel10k \
+  romkatv/powerlevel10k/powerlevel10k \
   trash \
   yarn \
   zsh-autosuggestions \

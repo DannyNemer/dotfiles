@@ -1,59 +1,14 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/danny/.oh-my-zsh"
 
-ZSH_THEME=powerlevel10k/powerlevel10k
-
+# Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0.1
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs time)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $%{%b%f%k%F{yellow}%} %{%f%}"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# Display command execution time stamp in `history` output. Requires oh-my-zsh.
-HIST_STAMPS='yyyy-mm-dd'
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# Number of lines to save to HISTFILE.
-HISTSIZE=100000
-# Number of lines to save in a sessions.
-SAVEHIST=100000
-
-# Write the history file in the ':start:elapsed;command' format.
-setopt EXTENDED_HISTORY
-# Write to the history file immediately, not when the shell exits.
-setopt INC_APPEND_HISTORY
-# Share history between all sessions.
-setopt SHARE_HISTORY
-# Expire a duplicate event first when trimming history.
-setopt HIST_EXPIRE_DUPS_FIRST
-# Do not record an event that was just recorded again.
-setopt HIST_IGNORE_DUPS
-# Delete an old recorded event if a new event is a duplicate.
-# setopt HIST_IGNORE_ALL_DUPS
-# Do not display a previously found event.
-setopt HIST_FIND_NO_DUPS
-# Do not write a duplicate event to the history file.
-# setopt HIST_SAVE_NO_DUPS
-# Do not record an event starting with a space.
-setopt HIST_IGNORE_SPACE
-# Remove superfluous blanks before recording entry.
-setopt HIST_REDUCE_BLANKS
-# Do not execute immediately upon history expansion.
-setopt HIST_VERIFY
-
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Add Homebrew packages to PATH
 export PATH=/usr/local/bin:$PATH
