@@ -91,6 +91,7 @@ alias reload='exec $SHELL -l'
 
 # System
 alias l='gls --color --group-directories-first -lah'
+alias ..='cd ..'
 
 # Git
 alias 'gca!'='git commit --verbose --amend --no-edit'
@@ -141,9 +142,8 @@ function git-commit-count() {
 	done
 }
 
-# First sets the head of the branch "production" to the head of "main" without switching the current branch.
-# Then prompts the user to type "yes" to confirm.
-# Then pushes the changes to origin.
+# Reset the branch "production" to the head of "main" without switching the
+# current branch and require confirmation before pushing.
 function push-to-prod() {
   git checkout production
   git reset --hard main
