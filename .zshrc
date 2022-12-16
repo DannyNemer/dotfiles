@@ -124,10 +124,10 @@ alias o='a -e code'
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# zsh-autosuggestions
+# zsh-autosuggestions - must be at the end of .zshrc
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# zsh-syntax-highlighting (must be at the end of ~/.zshrc)
+# zsh-syntax-highlighting - must be at the end of .zshrc
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Fig post block. Keep at the bottom of this file.
