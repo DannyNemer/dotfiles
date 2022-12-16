@@ -95,7 +95,7 @@ function push-to-prod() {
 export EDITOR="code"
 
 # Add Homebrew packages to PATH
-export PATH=/usr/local/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 
 ###########
 #  Shell  #
@@ -108,7 +108,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_job
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $%{%b%f%k%F{yellow}%} %{%f%}"
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # fasd
 eval "$(fasd --init auto)"
@@ -118,10 +118,10 @@ alias o='a -e code'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # zsh-autosuggestions - must be at the end of .zshrc
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-syntax-highlighting - must be at the end of .zshrc
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
