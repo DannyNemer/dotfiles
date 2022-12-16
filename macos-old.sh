@@ -7,8 +7,8 @@
 # Treat periods as word boundaries.
 defaults write .GlobalPreferences AppleTextBreakLocale en_US_POSIX
 
-# Disable the sound effects on boot.
-sudo nvram SystemAudioVolume=" "
+# Use punctuation (e.g., periods) for word boundaries when highlighting text (e.g., double-clicking), and disable commas in system-formatted numbers.
+defaults write NSGlobalDomain AppleLocale en_US_POSIX
 
 # Restart automatically if the computer freezes.
 sudo systemsetup -setrestartfreeze on
@@ -20,17 +20,11 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 # Save to disk (not to iCloud) by default.
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-# Use punctuation (e.g., periods) for word boundaries when highlighting text (e.g., double-clicking), and disable commas in system-formatted numbers.
-defaults write NSGlobalDomain AppleLocale en_US_POSIX
-
 # Use dark menu bar, Dock, and Spotlight.
 defaults write NSGlobalDomain AppleInterfaceStyle "Dark"
 
 # Disable translucency in the menu bar, side bars, and elsewhere.
 defaults write com.apple.universalaccess reduceTransparency -bool true
-
-# Disable audio beep feedback when volume is changed.
-defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool false
 
 # Restore open documents and windows when re-opening apps.
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
@@ -50,9 +44,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Use scroll gesture with the Ctrl (^) modifier key to zoom.
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-
-# Follow the keyboard focus while zoomed in.
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Require password immediately after sleep or screen saver begins.
 defaults write com.apple.screensaver askForPassword -int 1
@@ -76,8 +67,6 @@ defaults write com.apple.finder FXPreferredViewStyle clmv
 defaults write com.apple.finder _FXSortFoldersFirst true
 # Disable the warning before emptying the Trash.
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
-# Empty Trash securely by default.
-defaults write com.apple.finder EmptyTrashSecurely -bool true
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 # Set desktop background.
@@ -95,17 +84,6 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock autohide -bool true
 # Do not automatically rearrange Spaces using MRU.
 defaults write com.apple.dock mru-spaces -bool false
-
-###################
-# Menu Bar        #
-###################
-
-# Use these menu bar items, in this left-to-right order: Volume, Airport, Battery, Clock.
-defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
-# Show percentage in Battery menu bar item.
-defaults write com.apple.menuextra.battery ShowPercent -bool true
-# Show day, date, and seconds in Clock menu bar item.
-defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm:ss a"
 
 ###################
 # Applications    #
