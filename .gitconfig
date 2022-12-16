@@ -3,52 +3,18 @@
 	email = hi@DannyNemer.com
 
 [core]
-	excludesfile = /Users/Danny/.gitignore
 	editor = code --wait
 
-[pager]
-	#	Do not use `diff-so-fancy` for `log` pager.
-	show = diff-so-fancy | less --tabs=4 -RFX
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	branch = false
-
-[color]
-	ui = true
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-[color "diff"]
-	meta = 227
-	frag = magenta bold
-	commit = 227 bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-
-[push]
-	default = simple
-
-[log]
-	# Act as if the `--follow` option is used (when a single <path> is given) to continue listing the history of the file beyond renames.
-	follow = true
-
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
-
 [filter "lfs"]
+	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-	clean = git-lfs clean -- %f
 
 [alias]
 	# `git restore-dates [$number]` restores the commit dates to corresponding
-	# author dates of the `$number` most recent commits, or all commits if `$number`
-	# is undefined. This is useful after a rebase.
+	# author dates of the `$number` most recent commits, or all commits if
+	# `$number` is undefined. This is useful after a rebase.
 	restore-dates = !"restoreDates() { \
 		HAS_CHANGES="$(git status -s)"; \
 		if [[ -n $HAS_CHANGES ]]; then \
@@ -63,25 +29,3 @@
 		fi; \
 	}; restoreDates"
 
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
-
-[merge]
-	tool = Kaleidoscope
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
-[difftool]
-	prompt = false
-
-[mergetool]
-	prompt = false
-
-[diff]
-	tool = Kaleidoscope
-[pull]
-	rebase = true
-[init]
-	defaultBranch = main
