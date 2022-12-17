@@ -105,6 +105,11 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 #  Shell  #
 ###########
 
+# oh-my-zsh - only used for enhancements to history
+HISTSIZE=100000
+HIST_STAMPS="yyyy-mm-dd"
+source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
+
 # Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0.1

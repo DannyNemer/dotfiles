@@ -37,7 +37,10 @@ brew install --cask \
   sunsama \
   tableplus \
   visual-studio-code \
-  zoom \
+  zoom
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install `fzf` shell extensions
 /usr/local/opt/fzf/install
