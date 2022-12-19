@@ -105,7 +105,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 #  Shell  #
 ###########
 
-# oh-my-zsh - only used for enhancements to history
+# oh-my-zsh - only used to enhance history
 HISTSIZE=100000
 HIST_STAMPS="yyyy-mm-dd"
 source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
