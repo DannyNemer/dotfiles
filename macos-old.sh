@@ -23,12 +23,6 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 # Restore open documents and windows when re-opening apps.
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
 
-# Set global keyboard shortcut: shift+command+v -> "Paste and Match Style".
-defaults write NSGlobalDomain NSUserKeyEquivalents -dict  "Paste and Match Style" "@\$v"
-
-# Check for software updates daily, not just once per week.
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
 # Automatically quit printer app once the print jobs complete.
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
@@ -97,6 +91,3 @@ defaults write org.n8gray.QLColorCode font SourceCodePro-Medium
 defaults write com.github.GitHub NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write com.github.GitHub NSAutomaticDashSubstitutionEnabled -bool false
 defaults write com.github.GitHub NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Disable App Nap for Spotify.app to prevent it from pausing while in background.
-defaults write com.spotify.client NSAppSleepDisabled -bool YES
