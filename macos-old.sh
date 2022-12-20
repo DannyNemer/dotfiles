@@ -4,12 +4,6 @@
 # System          #
 ###################
 
-# Treat periods as word boundaries.
-defaults write .GlobalPreferences AppleTextBreakLocale en_US_POSIX
-
-# Use punctuation (e.g., periods) for word boundaries when highlighting text (e.g., double-clicking), and disable commas in system-formatted numbers.
-defaults write NSGlobalDomain AppleLocale en_US_POSIX
-
 # Restart automatically if the computer freezes.
 sudo systemsetup -setrestartfreeze on
 

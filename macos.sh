@@ -1,5 +1,9 @@
-# Disable shadow in screenshots.
+# Disable shadow in screenshots of windows.
 defaults write com.apple.screencapture disable-shadow -bool true
+
+# Treat punctuation (e.g., periods) as word-boundaries for ⌥-arrow-key skipping
+# and double-click selection.
+defaults write .GlobalPreferences AppleTextBreakLocale en_US_POSIX
 
 # Set Visual Studio Code as the default editor for various file types.
 duti -s com.microsoft.VSCode public.json all
