@@ -69,10 +69,10 @@ alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/prod
 # Print the number of commits to the current directory's repository for each of
 # the past `$num_days` days.
 function git-commit-count() {
-	for ((i=$((${1:-7} - 1)); i > -1; i--)); do
-		DAY="`date -v-${i}d "+%b %d"`"
-		git rev-list main --count --after="${DAY} 00:00:00" --before="${DAY} 23:59:59" | awk -v day=$DAY '{print day ": " $1}'
-	done
+  for ((i=$((${1:-7} - 1)); i > -1; i--)); do
+    DAY="`date -v-${i}d "+%b %d"`"
+    git rev-list main --count --after="${DAY} 00:00:00" --before="${DAY} 23:59:59" | awk -v day=$DAY '{print day ": " $1}'
+  done
 }
 
 # Reset the branch "production" to the head of "main" without switching the
