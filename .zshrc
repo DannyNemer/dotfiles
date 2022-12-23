@@ -78,14 +78,23 @@ function git-commit-count() {
 # Reset the branch "production" to the head of "main" without switching the
 # current branch and require confirmation before pushing.
 function push-to-prod() {
-  git checkout production
-  git reset --hard main
-  echo "Type 'yes' to push to production:"
-  read confirmation
+  HAS_CHANGES="$(git status -s)";
+  if [[ -n $HAS_CHANGES ]]; then
+    git stash;
+  fi;
+
+  git checkout production;
+  git reset --hard main;
+  echo "Type 'yes' to push to production:";
+  read confirmation;
   if [ "$confirmation" = "yes" ]; then
-    git push origin production
-  fi
-  git checkout main
+    git push origin production;
+  fi;
+  git checkout main;
+
+  if [[ -n $HAS_CHANGES ]]; then
+    git stash pop --quiet;
+  fi;
 }
 
 #############
