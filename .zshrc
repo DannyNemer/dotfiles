@@ -88,7 +88,7 @@ function push-to-prod() {
   echo "Type 'yes' to push to production:";
   read confirmation;
   if [ "$confirmation" = "yes" ]; then
-    git push origin production;
+    git push --verbose --force-with-lease origin production;
   fi;
   git checkout main;
 
