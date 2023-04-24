@@ -116,6 +116,9 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 #  Shell  #
 ###########
 
+# Active Python virtual environment for Conductor
+source $HOME/conductor-python/conductor-env/bin/activate
+
 # oh-my-zsh - only used to enhance history
 HISTSIZE=100000
 HIST_STAMPS="yyyy-mm-dd"
