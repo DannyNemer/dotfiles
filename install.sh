@@ -18,10 +18,6 @@ brew install \
   zsh-autosuggestions \
   zsh-syntax-highlighting
 
-# Add un-versioned symlinks: `python` -> `python3` -> `python3.11`
-ln -s /opt/homebrew/bin/python3 /opt/homebrew/bin/python
-ln -s /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
-
 # Install casks
 brew install --cask \
   1password \
