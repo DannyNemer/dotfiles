@@ -5,7 +5,7 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # and double-click selection.
 defaults write .GlobalPreferences AppleTextBreakLocale en_US_POSIX
 
-# Set Visual Studio Code as the default editor for various file types.
+# Set VSCode as the default editor for various file types.
 duti -s com.microsoft.VSCode public.json all
 duti -s com.microsoft.VSCode public.plain-text all
 duti -s com.microsoft.VSCode public.python-script all
