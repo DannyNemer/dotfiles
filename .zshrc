@@ -69,6 +69,9 @@ alias gsts='git stash show --patch'
 alias gweb='gh repo view --web'
 alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/production...main'
 
+# Third-party
+alias code='code-insiders'
+
 # Print the number of commits to the current directory's repository for each of
 # the past `$num_days` days.
 function git-commit-count() {
@@ -105,7 +108,7 @@ function push-to-prod() {
 #############
 
 # Set VS Code as default editor
-export EDITOR="code"
+export EDITOR="code-insiders"
 
 # Add Homebrew packages to PATH
 export PATH="/opt/homebrew/bin:$PATH"
@@ -137,7 +140,7 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # fasd
 eval "$(fasd --init auto)"
-alias o='a -e code'
+alias o='a -e code-insiders'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
