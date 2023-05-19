@@ -72,12 +72,18 @@ alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/prod
 # Third-party
 alias code='code-insiders'
 
-# Print the number of commits to the current directory's repository for each of
-# the past `$num_days` days.
-function git-commit-count() {
-  for ((i=$((${1:-7} - 1)); i > -1; i--)); do
-    DAY="`date -v-${i}d "+%b %d"`"
-    git rev-list main --count --after="${DAY} 00:00:00" --before="${DAY} 23:59:59" | awk -v day=$DAY '{print day ": " $1}'
+# Print the number of git commits authored on each of the past `$num_days` days
+# (default: 7) for the current directory's git repository.
+function git-commit-count {
+  n=${1:-7}
+  for (( i=0; i<$n; i++ ))
+  do
+    date=$(date -v-${i}d "+%Y-%m-%d")
+    formatted_date=$(date -v-${i}d "+%b %d")
+    # Count the number of commits based on author date, not commit date to count
+    # amended commits on the day they were originally created.
+    commits=$(git log --pretty=format:'%ad' --date=short | grep "$date" | wc -l)
+    echo "$formatted_date: $commits"
   done
 }
 
