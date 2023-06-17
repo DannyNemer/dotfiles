@@ -69,6 +69,9 @@ alias gsts='git stash show --patch'
 alias gweb='gh repo view --web'
 alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/production...main'
 
+# Misc
+alias j='yarn jest'
+
 # Print the number of git commits authored on each of the past `$num_days` days
 # (default: 7) for the current directory's git repository.
 function git-commit-count {
