@@ -111,7 +111,7 @@ function push-to-prod() {
 #############
 
 # Set VS Code as default editor
-export EDITOR="code-insiders"
+export EDITOR="code"
 
 # Add Homebrew packages to PATH
 export PATH="/opt/homebrew/bin:$PATH"
@@ -143,7 +143,7 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # fasd
 eval "$(fasd --init auto)"
-alias o='a -e code-insiders'
+alias o='a -e code'
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
