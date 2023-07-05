@@ -128,7 +128,7 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 ###########
 
 # Active Python virtual environment for Conductor
-source $HOME/conductor-python/env/bin/activate
+source $HOME/dev/conductor-python/env/bin/activate
 
 # oh-my-zsh - only used to enhance history
 HISTSIZE=100000
