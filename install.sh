@@ -15,6 +15,7 @@ brew install \
   romkatv/powerlevel10k/powerlevel10k \
   trash \
   yarn \
+  zoxide \
   zsh-autosuggestions \
   zsh-syntax-highlighting
 

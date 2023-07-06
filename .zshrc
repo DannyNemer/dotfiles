@@ -149,12 +149,11 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $%{%b%f%k%F
 POWERLEVEL9K_TIME_FORMAT="%D{%I:%M:%S %p}" # 12-hour format
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
-# fasd
-eval "$(fasd --init auto)"
-alias o='a -e code'
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # zsh-autosuggestions - must be at the end of .zshrc
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
