@@ -32,8 +32,10 @@ brew install --cask \
   height \
   istat-menus \
   iterm2 \
+  kaleidoscope \
   notion \
   postgres-unofficial \
+  rewind \
   slack \
   sunsama \
   tableplus \
