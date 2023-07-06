@@ -123,6 +123,10 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Add Postgres command line tools to PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
+# Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+# `python3`, `python3-config`, `pip3` etc., respectively
+export PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
+
 ###########
 #  Shell  #
 ###########
