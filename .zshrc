@@ -12,13 +12,13 @@ fi
 #  Aliases  #
 #############
 
-# Upgrades all brew packages
+# Upgrades all brew packages.
 alias bubu='brew update && brew outdated && brew upgrade && brew cleanup'
 
-# Prints timestamps of 10 most recent sleep and wake events (for macOS portables)
+# Prints timestamps of 10 most recent sleep and wake events (for macOS portables).
 alias swlog='pmset -g log | grep --color=always -e " Sleep  " -e " Wake  " | tail -n 10'
 
-# Reloads the shell
+# Reloads the shell.
 alias reload='exec $SHELL -l'
 
 # System
@@ -114,24 +114,24 @@ function push-to-prod() {
 #  Exports  #
 #############
 
-# Set VS Code as default editor
+# Set VS Code as default editor.
 export EDITOR="code"
 
-# Add Homebrew packages to PATH
+# Add Homebrew packages to PATH.
 export PATH="/opt/homebrew/bin:$PATH"
 
-# Add Postgres command line tools to PATH
+# Add Postgres command line tools to PATH.
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 # Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
-# `python3`, `python3-config`, `pip3` etc., respectively
+# `python3`, `python3-config`, `pip3` etc., respectively.
 export PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
 
 ###########
 #  Shell  #
 ###########
 
-# Active Python virtual environment for Conductor
+# Active Python virtual environment for Conductor.
 source $HOME/dev/conductor-python/env/bin/activate
 
 # oh-my-zsh - only used to enhance history
