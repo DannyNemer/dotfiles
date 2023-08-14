@@ -31,3 +31,6 @@
 
 [advice]
 	skippedCherryPicks = false
+
+[pull]
+	rebase = true
