@@ -68,6 +68,7 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsts='git stash show --patch'
 alias gweb='gh repo view --web'
+alias gpro='gh pr view --web'
 alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/production...main'
 
 # Misc
