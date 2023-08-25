@@ -128,9 +128,6 @@ export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 # `python3`, `python3-config`, `pip3` etc., respectively.
 export PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
 
-# Add Node 18 to PATH.
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
-
 ###########
 #  Shell  #
 ###########
