@@ -72,6 +72,7 @@ alias gpro='gh pr view --web'
 alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/production...main'
 
 # Misc
+alias t='yarn ts-node --transpileOnly'
 alias j='yarn jest'
 
 # Print the number of git commits authored on each of the past `$num_days` days
