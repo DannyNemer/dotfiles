@@ -72,7 +72,7 @@ alias gsts='git stash show --patch'
 alias ghr='gh repo view --web'
 alias ghpr='gh pr view --web'
 alias ghcb="gh repo view --branch $(git branch --show-current) --web"
-alias git-comp-prod='open https://github.com/conductor-io/conductor/compare/production...main'
+alias ghcmp="gh pr create --base production --head main --web"
 
 # Misc
 alias t='yarn ts-node --transpileOnly'
