@@ -81,7 +81,7 @@ alias j='yarn jest'
 
 # Print the number of git commits authored on each of the past `$num_days` days
 # (default: 7) for the current directory's git repository.
-function git-commit-count {
+git-commit-count() {
   n=${1:-7}
   for (( i=0; i<$n; i++ ))
   do
@@ -96,7 +96,7 @@ function git-commit-count {
 
 # Reset the branch "production" to the head of "main" without switching the
 # current branch and require confirmation before pushing.
-function push-to-prod() {
+push-to-prod() {
   HAS_CHANGES="$(git status -s)";
   if [[ -n $HAS_CHANGES ]]; then
     git stash;
