@@ -70,9 +70,10 @@ alias gsts='git stash show --patch'
 
 # GitHub CLI
 alias ghr='gh repo view --web'
-alias ghpr='gh pr view --web'
-alias ghcb="gh repo view --branch $(git branch --show-current) --web"
-alias ghcmp="gh pr create --base production --head main --web"
+alias ghcmp="gh pr create --web --base production --head main --web"
+ghpr() {
+    gh pr view --web || gh pr create --web
+}
 
 # Misc
 alias t='yarn ts-node --transpileOnly'
