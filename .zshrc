@@ -71,7 +71,7 @@ alias gsts='git stash show --patch'
 # GitHub CLI
 alias ghr='gh repo view --web'
 alias gcmp="gh pr create --web --base production --head main --web"
-ghpr() {
+gpr() {
   # Create a remote branch if it doesn't exist.
   git push --set-upstream origin $(git_current_branch)
   # Open the PR if it exists, otherwise open the webpage to create it.
