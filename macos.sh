@@ -31,6 +31,7 @@ duti -s com.microsoft.VSCode .jsx all
 duti -s com.microsoft.VSCode .log all
 duti -s com.microsoft.VSCode .lua all
 duti -s com.microsoft.VSCode .md all
+duti -s com.microsoft.VSCode .mdx all
 duti -s com.microsoft.VSCode .php all
 duti -s com.microsoft.VSCode .pl all
 duti -s com.microsoft.VSCode .py all
