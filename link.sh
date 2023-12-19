@@ -3,5 +3,5 @@ for file in $(cd $(dirname $0) && pwd)/.{zshrc,gitconfig}; do
   ln -sv $file ~
 done
 
-# Sync the desktop folder with Dropbox.
-sudo remove ~/Desktop && ln -s ~/Dropbox/Desktop ~/Desktop
+# Sync the Desktop folder with Dropbox.
+sudo rmdir ~/Desktop && ln -s ~/Library/CloudStorage/Desktop ~/Desktop
