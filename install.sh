@@ -14,7 +14,6 @@ brew install \
   python \
   romkatv/powerlevel10k/powerlevel10k \
   trash \
-  yarn \
   zoxide \
   zsh-autosuggestions \
   zsh-syntax-highlighting
@@ -48,3 +47,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Install `fzf` shell extensions
 /usr/local/opt/fzf/install
+
+# Enable `yarn` via `corepack`, which is included with Node.js
+corepack enable
