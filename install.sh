@@ -44,6 +44,10 @@ brew install --cask \
   xscope \
   zoom
 
+# Install global `npm` packages
+npm install --global \
+  mintlify
+
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
