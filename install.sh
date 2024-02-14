@@ -33,13 +33,16 @@ brew install --cask \
   istat-menus \
   iterm2 \
   kaleidoscope \
+  linear-linear \
   notion \
+  notion-calendar \
   postgres-unofficial \
+  reflect \
   rewind \
   slack \
-  sunsama \
   tableplus \
   visual-studio-code \
+  xscope \
   zoom
 
 # Install oh-my-zsh
