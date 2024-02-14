@@ -7,11 +7,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install \
   coreutils \
   duti \
-  fasd \
   fzf \
   gh \
-  node \
-  python \
+  node@20 \
+  python@3.11 \
   romkatv/powerlevel10k/powerlevel10k \
   trash \
   zoxide \
