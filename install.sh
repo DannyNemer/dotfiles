@@ -23,8 +23,8 @@ brew install --cask \
   alfred \
   amazon-workspaces \
   bettertouchtool \
+  codewhisperer \
   dropbox \
-  fig \
   gitup \
   google-chrome \
   grammarly-desktop \
