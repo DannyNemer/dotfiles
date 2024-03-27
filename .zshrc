@@ -80,8 +80,8 @@ gpr() {
 }
 
 # Misc
-alias t='yarn ts-node --transpileOnly'
-alias j='yarn jest'
+alias t='pnpm ts-node --transpileOnly'
+alias j='pnpm jest'
 
 # Print the number of git commits authored on each of the past `$num_days` days
 # (default: 7) for the current directory's git repository.
