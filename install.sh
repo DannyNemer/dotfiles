@@ -10,6 +10,7 @@ brew install \
   fzf \
   gh \
   node@20 \
+  pnpm \
   python@3.11 \
   romkatv/powerlevel10k/powerlevel10k \
   trash \
@@ -53,6 +54,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Install `fzf` shell extensions
 /usr/local/opt/fzf/install
-
-# Enable `yarn` via `corepack`, which is included with Node.js
-corepack enable
