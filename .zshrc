@@ -85,6 +85,7 @@ alias j='pnpm jest'
 alias p='pnpm'
 alias pt='pnpm test'
 alias pi='pnpm install'
+alias pup='pnpm update --interactive --recursive'
 
 # Print the number of git commits authored on each of the past `$num_days` days
 # (default: 7) for the current directory's git repository.
