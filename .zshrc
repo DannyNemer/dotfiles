@@ -125,6 +125,30 @@ push-to-prod() {
   fi;
 }
 
+# Copy the content of all files in a directory to the clipboard for RAG.
+copy_files_with_content() {
+  if [ -z "$1" ]; then
+    echo "Usage: copy_files_with_content <directory>"
+    return 1
+  fi
+
+  local DIR="$1"
+  local OUTPUT="The following are all of the files in the directory $DIR:\n\n"
+  local FILES=()
+  while IFS= read -r -d '' file; do
+    FILES+=("$file")
+    OUTPUT+="$file:\n\`\`\`\n$(cat "$file")\n\`\`\`\n\n"
+  done < <(find "$DIR" \( -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.yaml" -o -name "*.json" \) -type f -print0)
+
+  echo -n "$OUTPUT" | pbcopy
+  echo "Copied to clipboard!"
+  echo "Included files:"
+
+  for file in "${FILES[@]}"; do
+    echo "- $file"
+  done
+}
+
 #############
 #  Exports  #
 #############
