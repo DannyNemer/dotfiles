@@ -11,6 +11,7 @@ brew install \
   gh \
   node@20 \
   pnpm \
+  yarn \
   python@3.11 \
   romkatv/powerlevel10k/powerlevel10k \
   trash \
