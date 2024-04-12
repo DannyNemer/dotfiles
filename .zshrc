@@ -72,11 +72,20 @@ alias gsts='git stash show --patch'
 # GitHub CLI
 alias ghr='gh repo view --web'
 alias gcmp="gh pr create --web --base production --head main --web"
+
+# Create a new PR or open an existing one.
 gpr() {
-  # Create a remote branch if it doesn't exist.
+  # Create a remote branch if it does not exist.
   git push --set-upstream origin $(git_current_branch)
-  # Open the PR if it exists, otherwise open the webpage to create it.
-  gh pr view --web || gh pr create --web
+
+  # Check an open PR exists.
+  if gh pr view --json state --jq '.state == "OPEN"' >/dev/null 2>&1; then
+    # Open the existing PR if it's open.
+    gh pr view --web
+  else
+    # Create a new PR if the PR does not exist or is closed/merged.
+    gh pr create --web
+  fi
 }
 
 # Misc
