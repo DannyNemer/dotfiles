@@ -23,9 +23,9 @@ brew install \
 brew install --cask \
   1password \
   alfred \
+  amazon-q \
   amazon-workspaces \
   bettertouchtool \
-  codewhisperer \
   dropbox \
   gitup \
   google-chrome \
