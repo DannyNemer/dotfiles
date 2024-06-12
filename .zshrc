@@ -147,7 +147,7 @@ copy_files_with_content() {
   while IFS= read -r -d '' file; do
     FILES+=("$file")
     OUTPUT+="$file:\n\`\`\`\n$(cat "$file")\n\`\`\`\n\n"
-  done < <(find "$DIR" \( -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.yaml" -o -name "*.json" \) -type f -print0)
+  done < <(find "$DIR" \( -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.yaml" -o -name "*.json" -o -name "*.mdx" \) -type f -print0)
 
   echo -n "$OUTPUT" | pbcopy
   echo "Copied to clipboard!"
