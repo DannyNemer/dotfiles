@@ -123,13 +123,14 @@ push-to-prod() {
   git checkout production
   git reset --hard main
 
-  echo "Enter your system password to push to production:"
-  sudo -v  # This will prompt for the password
-  if [ $? -eq 0 ] then  # Check if sudo was successful
+  # Invalidate any existing sudo timestamp and prompt for password.
+  sudo -k
+  if sudo true; then
     git push --verbose --force-with-lease origin production
   else
-    echo "Authentication failed. Push aborted."
+    echo "Authentication failed. Push to production aborted."
   fi
+
   git checkout main
 
   if [[ -n $HAS_CHANGES ]]; then
