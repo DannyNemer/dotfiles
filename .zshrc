@@ -183,7 +183,7 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 ###########
 
 # Active Python virtual environment for Conductor.
-source $HOME/dev/conductor-python/env/bin/activate
+source $HOME/conductor-test/venv/bin/activate
 
 # oh-my-zsh - only used to enhance history
 HISTSIZE=100000
