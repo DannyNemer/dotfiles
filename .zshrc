@@ -115,26 +115,26 @@ git-commit-count() {
 # Reset the branch "production" to the head of "main" without switching the
 # current branch and require system password before pushing.
 push-to-prod() {
-  HAS_CHANGES="$(git status -s)";
+  HAS_CHANGES="$(git status -s)"
   if [[ -n $HAS_CHANGES ]]; then
-    git stash;
-  fi;
+    git stash
+  fi
 
-  git checkout production;
-  git reset --hard main;
+  git checkout production
+  git reset --hard main
 
-  echo "Enter your system password to push to production:";
-  sudo -v;  # This will prompt for the password
-  if [ $? -eq 0 ]; then  # Check if sudo was successful
-    git push --verbose --force-with-lease origin production;
+  echo "Enter your system password to push to production:"
+  sudo -v  # This will prompt for the password
+  if [ $? -eq 0 ] then  # Check if sudo was successful
+    git push --verbose --force-with-lease origin production
   else
-    echo "Authentication failed. Push aborted.";
-  fi;
-  git checkout main;
+    echo "Authentication failed. Push aborted."
+  fi
+  git checkout main
 
   if [[ -n $HAS_CHANGES ]]; then
-    git stash pop --quiet;
-  fi;
+    git stash pop --quiet
+  fi
 }
 
 # Copy the content of all files in a directory to the clipboard for RAG.
