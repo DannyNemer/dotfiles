@@ -113,7 +113,7 @@ git-commit-count() {
 }
 
 # Reset the branch "production" to the head of "main" without switching the
-# current branch and require confirmation before pushing.
+# current branch and require system password before pushing.
 push-to-prod() {
   HAS_CHANGES="$(git status -s)";
   if [[ -n $HAS_CHANGES ]]; then
@@ -122,10 +122,13 @@ push-to-prod() {
 
   git checkout production;
   git reset --hard main;
-  echo "Type 'yes' to push to production:";
-  read confirmation;
-  if [ "$confirmation" = "yes" ]; then
+
+  echo "Enter your system password to push to production:";
+  sudo -v;  # This will prompt for the password
+  if [ $? -eq 0 ]; then  # Check if sudo was successful
     git push --verbose --force-with-lease origin production;
+  else
+    echo "Authentication failed. Push aborted.";
   fi;
   git checkout main;
 
