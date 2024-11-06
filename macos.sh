@@ -5,7 +5,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # and double-click selection.
 defaults write .GlobalPreferences AppleTextBreakLocale en_US_POSIX
 
-# Set VSCode as the default editor for various file types.
+# Set Cursor as the default editor for various file types.
+# Change to `com.microsoft.VSCode` for VS Code.
 duti -s com.todesktop.230313mzl4w4u92 public.json all
 duti -s com.todesktop.230313mzl4w4u92 public.plain-text all
 duti -s com.todesktop.230313mzl4w4u92 public.python-script all
@@ -36,6 +37,7 @@ duti -s com.todesktop.230313mzl4w4u92 .php all
 duti -s com.todesktop.230313mzl4w4u92 .pl all
 duti -s com.todesktop.230313mzl4w4u92 .py all
 duti -s com.todesktop.230313mzl4w4u92 .rb all
+duti -s com.todesktop.230313mzl4w4u92 .svg all
 duti -s com.todesktop.230313mzl4w4u92 .ts all
 duti -s com.todesktop.230313mzl4w4u92 .tsx all
 duti -s com.todesktop.230313mzl4w4u92 .txt all
