@@ -9,9 +9,8 @@ brew install \
   duti \
   fzf \
   gh \
-  node@20 \
+  node \
   pnpm \
-  yarn \
   python@3.11 \
   romkatv/powerlevel10k/powerlevel10k \
   trash \
@@ -26,6 +25,7 @@ brew install --cask \
   amazon-q \
   amazon-workspaces \
   bettertouchtool \
+  docker \
   dropbox \
   gitup \
   google-chrome \
@@ -34,11 +34,9 @@ brew install --cask \
   istat-menus \
   iterm2 \
   kaleidoscope \
-  linear-linear \
   notion \
   notion-calendar \
   postgres-unofficial \
-  reflect \
   rewind \
   slack \
   tableplus \
@@ -48,7 +46,8 @@ brew install --cask \
 
 # Install global `npm` packages
 npm install --global \
-  mintlify
+  mintlify \
+  @anthropic-ai/claude-code
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
