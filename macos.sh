@@ -37,6 +37,7 @@ duti -s com.todesktop.230313mzl4w4u92 .py all
 duti -s com.todesktop.230313mzl4w4u92 .rb all
 duti -s com.todesktop.230313mzl4w4u92 .sass all
 duti -s com.todesktop.230313mzl4w4u92 .scss all
+duti -s com.todesktop.230313mzl4w4u92 .sql all
 duti -s com.todesktop.230313mzl4w4u92 .svg all
 duti -s com.todesktop.230313mzl4w4u92 .toml all
 duti -s com.todesktop.230313mzl4w4u92 .ts all
